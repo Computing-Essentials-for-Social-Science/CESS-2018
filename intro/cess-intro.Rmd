@@ -1,0 +1,27 @@
+---
+title: "Computing Essentials for Social Scientists: Day One"
+author: |
+        | Christopher Skovron
+        | Northwestern University 
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  revealjs::revealjs_presentation: 
+    theme: simple
+    highlight: haddock
+    center: false
+    transition: none
+    #css: reveal.css
+    self_contained: false
+---
+          
+          
+# Computing Essentials for Social Scientists
+
+
+## Today
+- Introductions
+- Program Requirements
+- What is data science? What do we hope to get out of this? 
+
+
+

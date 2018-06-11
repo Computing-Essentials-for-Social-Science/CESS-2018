@@ -1,0 +1,29 @@
+---
+title: "How to Read, Write, and Google for Success in Coding"
+author: |
+        | Christopher Skovron
+        | Northwestern University 
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  revealjs::revealjs_presentation: 
+    theme: simple
+    highlight: haddock
+    center: false
+    transition: none
+    #css: reveal.css
+    self_contained: false
+---
+          
+          
+## 
+
+
+How to read documentation
+
+
+How to comment code/being kind to your future self 
+
+
+How to google for help 
+
+

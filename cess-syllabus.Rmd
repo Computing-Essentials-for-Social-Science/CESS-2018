@@ -1,0 +1,58 @@
+---
+title: "Computing Essentials for Social Scientists Syllabus"
+author: "Christopher Skovron and Jon Atwell"
+date: "6/11/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## General information
+
+Instructors:  
+Jon Atwell <atwell@northwestern.edu>  
+Data Science Scholar, Northwestern Institute on Complex Systems and Institute for Policy Research  
+PhD, Sociology, Michigan  
+
+Christopher Skovron <cskovron@northwestern.edu>  
+Data Science Scholar, Northwestern Institute on Complex Systems and Institute for Policy Research  
+PhD, Political Science, Michigan
+
+Both instructors will hold occasional office hours in the NICO offices on the first floor of Chambers Hall (room 118A, behind the kitchen). Times will be communicated soon. 
+
+
+## Pre-course preparation
+
+Please install on the laptop you will be using for CESS and the following workshops both Anaconda and RStudio. [Instructions are here.](https://sites.northwestern.edu/summerworkshops/resources/software-installation/)
+
+Please begin to familiarize yourself with DataCamp by at least browsing through their introductory Python and R classes. DataCamp is a good resource to supplement the Research Computing workshops that will occur this summer. You should apply for access to additional DataCamp lessons after you complete Intro to R and Intro to Python either in person or on DataCamp. [Information is here.](https://www.it.northwestern.edu/research/campus-events/data-camp.html)
+
+## Program requirements
+
+Code of conduct.
+
+In addition to CESS sessions on June 18, 19, and 21, students are required to attend four additional workshops from the [Data Science and Programming workshops.](https://sites.northwestern.edu/summerworkshops/) Intro to R is two days and counts as two workshops. Intro to Python is three days and counts as two workshops. Students are encouraged to select additional workshops relevant to their research interests and to consult with the instructors when choosing workshops. 
+
+## Schedule
+
+### Day One, June 18 
+
+- Introduction to the program and to each other.
+- Program requirements
+- What is data science? What are we doing here? 
+- Differences between Python, R, and other software
+- What you need and don't need to learn to become successful in using data science in the social sciences
+
+### Day Two, June 18
+
+- Basic programming concepts
+- How to write code and get help writing code
+
+### Day Three, June 21
+
+- Getting organized for effective data science work
+- Principles of big data 
+
+
