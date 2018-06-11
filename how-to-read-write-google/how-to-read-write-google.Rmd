@@ -15,15 +15,58 @@ output:
 ---
           
           
-## 
+## You probably hear a lot about "clean" code 
+
+## Most of that is bullshit and pandering
+- unless you are working in industry in a setting where things need to highly scale 
+
+## In five years, you will look back on your past self's code and be horrified 
+- I am told this continues until death. 
+
+## Reading and writing documents related to coding
+- You will be reading new kinds of documentation, vignettes, examples, error messages
+- These will seem confusing at first
+- There are strategies, bu tnothing can beat practice 
+
+## Your goals in writing code are more modest 
+- Does this do what I need it to do in a reasonably computationally efficient manner? 
+- Will my future self understand it? 
+- Will my collaborators and/or replicators understand it? 
+- Have I written in such a way that will prevent me from making mistakes? 
+We will address each of these goals in order. 
 
 
-How to read documentation
+
+# How to read documentation
 
 
-How to comment code/being kind to your future self 
 
 
-How to google for help 
+# How to comment code/being kind to your future self 
+
+
+
+## Pick good names
+- You might be tempted to use abbreviations or non-words to save yourself from typing the same characters over and over
+- With modern IDEs, tab completion means this is not a big issue
+- Choose names that are legible, clear, and precise 
+- Name functions what they do, name variables what they are 
+
+
+## Principles of good commenting 
+
+
+
+
+
+
+# How to find help
+
+## Someone else has had your problem before 
+- You will almost never need to post your own question to a mailing list or to StackOverflow. 
+
+
+
+
 
 

@@ -2,6 +2,7 @@
 *.dropbox
 *.DS_Store
 *Icon
+*.xlsx
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

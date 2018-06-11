@@ -22,6 +22,38 @@ output:
 - Introductions
 - Program Requirements
 - What is data science? What do we hope to get out of this? 
+- Python vs R 
+- What do you need to learn and not learn to succeed with data science
+
+## Let's get to know one another 
+
+## Jon Atwell
+- Michigan PhD, 2017 - Sociology
+- Studies the emergence of culture and norms
+- Expertise: Python, text methods, agent-based modeling
+
+## Chris Skovron 
+- Michigan PhD, 2017 - Political Science
+- Studies public opinion and what people believe about it
+- Expertise: R, statistical modeling, causal inference
+
+## CESS students were chosen because
+- You already show creativity and promise in your research projects and ideas
+- Many of these projects could benefit from data science approaches 
+- You don't already know all the things we are going to teach
+
+## We expect from you 
+- Sustained commitment to integrating data science methods in your research
+- Be a resource for your colleagues, both students and faculty 
+- Be flexible, open to struggling and learning new things about yourself and your research 
+
+## Program requirements 
+- Three sessions this week
+- At least four additional sessions. Intro R and Python count as two sessions. 
+- Optional but suggested to attend afternoon practice sessions for workshops. 
+- Participate in future data science programming put on by Data Science Initiative 
+
+
 
 
 
