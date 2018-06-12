@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CESS 2018</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      position: fixed;
+      width:100%;
+      top:0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+        padding-top:5%;
+        height:auto;
+        width:100%
+        }
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      height: 100%;
+      width: 15%;
+      font-size:1.5em;
+    }
+
+    .text-left {
+        width:70%;
+        font-size:1.25em;
+        padding-right: 4%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      position: fixed;
+      width: 100%;
+      bottom:0;
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    p {
+        padding-left: 3%;
+        padding-bottom:1%;
+        padding-top: 1%;
+        padding-right:10%;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" style="z-index: 1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">CESS 2018</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/cess-syllabus.html">Syllabus</a></li>
+        <li><a href="/schedule.html">Schedule</a></li>
+        <li><a href="/lectures.html">Lecture Slides</a></li>
+        <li><a href="https://github.com/Computing-Essentials-for-Social-Science/CESS-2018">Github page</a></li>
+      </ul>
+
+
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+        <p></p>
+    </div>
+    <div class="col-sm-8 text-left">
+        <div style="font-size:1.2em;padding-bottom:15%;">
+        <br><br>
+        <h1>Python overview and installation</h1>
+            <div style="height:3em"></div>
+            <h2>What is Python?</h2>
+
+                <p>Python is a programming language, but when people say Python, they really mean the whole Python ecosystem, meaning all the available packages (sometimes called modules) and the supporting development environment (e.g. PyCharm, Jupyter). It gained popularity because it is easy to read and understand, it's most often interpreted (see <a href="#interpreted">here</a>) and it is open source. These features led to lots of contributions to its code base (all the pre-written packages), making it very robust for general programming purposes. There are now packages to do most computational tasks you could imagine and it has the second most pull requests on Github (after Javascript which is the workhorse language of the internet).</p>
+
+                <p>That said, in my understanding the only thing Python is the "best" language for is learning general programming. Its idioms seem to correspond to lots of people's procedural logic and its enforced indentation scheme helps us to recognize the logic structure. However, it (still) isn't very good for statistics, it wasn't created with parallel programming in mind, and actually isn't very fast compared to either older options (C/C++) or newer ones (Julia). But its strengths across the board have made it a standard language in both industry and academia.</p>
+
+                <p>For scientific work, alternatives include R, Stata, SAS, Matlab, Maple, and Wolfram Mathematica. Mathematica was supposed to be the future of scientific computing as of 10 years old, but like Stata, SAS, Matlab, and Maple, it is requires expensive individual or institutional licenses. While Python lacks many of those languages most powerful features (or knowledge base in the case of Wolfram), contributors have added some the best features to the Python ecosystem. A similar thing has happened with R and my expectation is that R with have overtaken Python as the language of <em>data science</em> in the next five years. We'll talk a bit about that in lectures and why you should still learn Python now.</p>
+
+                <p>For many areas of industry, the ability to understand and code in Python is standard, but other languages and tools are always going to be necessary. In principle, it would be possible for data science teams to work exclusively in Python, but in practice teams need to work with legacy code and a variety of other languages (e.g. Javascript/HTML/Ruby/C++) and tools (e.g. Amazon Web Services, SQL databases). That means getting good with Python can get your foot in a door, but working in an academic setting will not set you up to walk onto an industry data science team and contribute code right away. But rest assured that learning your first programming language is the biggest step and that any additional ones come much easier. Furthermore, even experienced working programmers often find themselves relying on documentation to code successfully because it's impractical to remember several languages as you cycle through different projects or stages of projects.</p>
+
+
+            <div style="height:3em"></div>
+            <h2>Should you use Python 2.7 or 3.X?</h2>
+
+                 <p>There was a period of consternation for Python users when you really could debate whether you should be using version 2.7 or the backwards incompatible 3.X versions, where X is a number and denotes the most recent stable version. The reason was that tools you depended on might not have a stable 3.X version yet. That is no longer the case and you should always be using 3.X as your default. As of June 2018, the stable version is 3.6.5. Python 2.7 is the final release of the version 2 code base. It works fine but is technically deprecated. If you come across something written in 2.7 or earlier, you can use the 2to3 tool to convert it to 3.X or use 2.7 in a virtual environment.</p>
+
+            <div style="height:3em"></div>
+            <h2>Getting Python 3.X</h2>
+                <p>There are several ways to get Python, listed below. For CESS, I'm recommending Method 1, but prefer Method 2. Why? Read on!</p>
+
+                <h3 style="padding-left: 3%">Method 1: Distribution Packages</h3>
+                    <p>As mentioned above, Python is more of a whole ecosystem than just a language. That means it is often helpful to manage your idiosyncratic ecosystem (niche?) with a package management software. The two major ones are Anaconda and Enthought's Canopy. These platforms provide point and click interfaces, come with essential packages installed, and offer means to get to other packages. These distributions lower the bar for getting the latest version of Python installed and are a great boon for educators because they help make sure students have the same versions and that everything runs successful on the seemingly infinite number of computer configurations people can have.</p>
+
+                    <p>I don't love them personally because I learned to work with Python before they existed and find command line management easier, but they excel at keeping your packages up-to-date. The basic installs are free, but you can find yourself looking at a pay wall if you need more specialized things. This brings my inner crank out because they are usually asking you to pay for open-source code. They are providing a service, but this means of asking us to pay for it doesn't feel right to me. Nonetheless if you're just getting started, I would recommend installing via Anaconda. You can find NU's Research Computing Services exact recommendation <a href="https://sites.northwestern.edu/summerworkshops/resources/software-installation/">here.</a> </p>
+
+                <h3 style="padding-left: 3%">Method 2: Directly from Python.org</h3>
+
+                    <p>You can download the latest Python, and development versions from <a href="https://www.python.org/downloads/">Python.org</a>. These installers include only the Python core. Missing are essential packages like Pandas and matplotlib. The core installation does include <code>pip</code>, a package to help you get other packages with simple command line commands like <code>pip install pandas</code>. This is my preferred means of managing Python, but, still, for this class I'd recommend the first method.</p>
+
+                <h3 style="padding-left: 3%">Method 3: System-wide package manager</h3>
+                    <p>Just like how Anaconda and Canopy manage your Python packages, there are system-wide package managers to support the creation of specialized computing environments. You can get a package manager for your whole operating system and let it manage your Python (or Anaconda, Conda, or Canopy installation). This might be considered the professional route, but in practice using a general command-line installer looks the same as method 2 above after the first two minutes because you're likely to be mostly in the Python ecosystem.<p>
+
+                <h3 style="padding-left: 3%">A note to Mac users</h3>
+                    <p>All Macs come with Python 2.7 installed because OSX and many of its apps use it. You can use it for some basic things, but it is a customized version that lacks the tools one often needs for scientific computing. Instead everyone installs another stand alone version. The installer packages know not to touch the system's version and set things up so that you can forget about it. Whatever you do, don't touch the system version! It doesn't live were other Python installs do and you'd have to look hard to find it, but if you do naive text (regex) searches from the command line, you might end up in the wrong spot and break things. Just be careful if you're deleting things or trying to modify a package.</p>
+
+            <div style="height:3em"></div>
+            <h2>Links for starting</h2>
+
+                <h3 style="padding-left: 3%">Windows</h3>
+
+                    <p>Method 1: I recommend installing Python via Anaconda. Just follow the <a href="https://www.anaconda.com/download/#windows">directions here</a> on the Anaconda website or <a href="https://sites.northwestern.edu/summerworkshops/resources/software-installation/">here on the Research Computing Services website.</a></p>
+
+                    <p>Method 2: You can find the Python binary for direct installation here: https://www.python.org/downloads/release/python-365/</p>
+
+                    <p>Method 3: If you are interested in trying out a system-wide package manager some day, you might try <a href="https://scoop.sh/">Scoop</a>. I haven't used Windows for programming tasks in ages and can't vouch for Scoop, but it is design to be like the Mac manager I use.  You can then proceed to install Python following this <a href="https://www.youtube.com/watch?v=oLEkF7ctXOU"> Youtube tutorial</a></p>
+
+
+
+                <h3 style="padding-left: 3%">Mac OSX or Linux</h3>
+                    <p>Method 1: I recommend installing Python via Anaconda. Just follow the <a href="https://www.anaconda.com/download/#macos">directions here</a> on the Anaconda website or <a href="https://sites.northwestern.edu/summerworkshops/resources/software-installation/">here on the Research Computing Services website.</a></p>
+
+                    <p>Method 2: You can find the Python binary for direction installation <a href="https://www.python.org/downloads/release/python-365/">here.</a></p>
+
+                    <p>Method 3: You might also consider trying out the system-wide package manager <a href="https://brew.sh/">Homebrew</a>. To install it, simply execute the following line in the terminal:</p>
+
+                    <p><code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code>
+                    <br></p>
+
+                    <p>then run the following lines one at a time:</p>
+                    <p>
+                            <code>brew install wget</code><br>
+                            <code>wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh</code><br>
+                            <code>bash Miniconda3-latest-MacOSX-x86_64.sh</code><br>
+                            <code>rm ~/Miniconda3-latest-MacOSX-x86_64.sh</code><br>
+                            <code>echo export PATH='~/miniconda3/bin:$PATH' >> ~/.profile</code><br>
+                            <code>source ~/.profile</code><br>
+                            <code>conda install anaconda</code><br>
+                            <code>conda update --all</code><br></p>
+
+            <div style="height:5em"></div>
+            <h1>Getting yourself more familiar with Python and its ecosystem</h1>
+            <div style="height:3em"></div>
+            <h2>What is happening when you install packages?</h2>
+
+                <p>A code package or module is usually just a collection of scripts and a "read me" file with some documentation. You can in fact just put the scripts in a subfolder in your project folder, name the subfolder in accordance with your import statement, and get going. The reason we do installs instead of just downloading to the project folder is because the installer finds the right spot to make the package available (or unavailable) to other projects and updates system paths, a list of where to look for things when you call them from anywhere (i.e. jupyter notebook).</p>
+
+                <p>The business about system paths is important and can be infuriating when things go wrong. When you remember that packages are just python code sitting somewhere on your computer, you can appreciate how calling an import statement like <code>import pandas</code> from a Python interpreter (something that will execute code for you) looking at your Desktop might go wrong. If you just downloaded the code onto your desktop, Python would find Pandas, but Pandas might not find Numpy, on which it depends. Or if you accidently let the Pandas folder to go into your Downloads folder, Python won't find it. The registry of system paths lets the interpreter know where to find Python (or other things), which should be in a well-organized place so that Python itself knows to look for packages. Installers made sure packages get to that place.</p>
+
+                <p>There are times when you might need different version of a package you already have (e.g. you get someone's older code in order to replicate their findings). Installing multiple versions of a package with the same name directly to your Python framework is likely going to cause problems sooner or later. That's where learning to use virtual environments becomes important. Virtual environments take away the pain of having to make distinctions between pandas-0.14.1 and pandas-0.22.1 and lets you just import pandas. A well-documented and reproducible project should provide the full specification of the environment and make it easy for you to setup a virtual environment with the right specifications. We'll cover virtual environments in a later work shop.</p>
+
+
+
+
+            <h2 id="interpreted">Interpreted and/or compiled languages</h2>
+                    <p>People often split programming languages into either <em>interpreted</em> or <em>compiled</em> and Python is generally in the former. This distinction refers to the process of translation by which our code get converted into lower-level machine code (what computers understand how to execute), not the language itself. In principle, both compilers and interpreters can be made for any language, but in practice languages are associated with one or the other process and there can be several different compilers or interpreters for a single language.</p>
+
+                    <p>When compiling code, there is a noticeable translation step between writing the human-readable code and the machine running the program. Compiling looks at the whole set of things a program or script can do and produces optimized and well-validated machine code. In interpreting a language, the translation work gets split up in some good and bad ways. Some of the components, from packages for example, can be converted just once when they are first run, but to support not needing to reinterpret the human-readable code, they preserve the full flexibility of original code. This can slow the machine code down significantly and doesn't protect against type errors. Compiled code doesn't attempt to preserve flexibility because the goal is for the compiled code it stand on its own. In practice, breaking translation process into chunks like an interpreted language makes it quicker to develop little bits and run them right away. That makes Python very fun and easy to work with, but can slow it down in the grand scheme of things.</p>
+
+                    <p>If one is done developing some Python code via the standard interpreted route and wants to speed the code up, they can make use of <em>just-in-time</em>
+                    compiling tools like <a href="http://pypy.org/">PyPy</a>. Alternatively, they can use <a href="http://cython.org/">Cython</a> to compile their Python module into the faster and more efficient <em>C</em> language binaries.</p>
+
+                    <p>What you should take away from the interpreted versus compiled distinction is that Python is interpreted and therefore slower than compiled code. Basic Python is probably fast enough for most of your needs, but if you are getting up to some real trouble, there are work arounds to speed up the code.</p>
+
+            <h2>Paradigms: Object-oriented, functional, imperative, declarative etc.</h2>
+                <p>This is some high level stuff that might help you win your bar's trivia night if you live in a college town, but really doesn't matter for getting on with your programming life, especially because Python supports multiple paradigms, as do many others.</p>
+
+                <p>Where knowing a bit about paradigms can be helpful is in thinking about how to organize your code. If you are thinking about simulating an interactive process with an agent-based model, it's best to construct the agents as <em>objects</em> with attributes and actions. The object-oriented paradigm focuses on this and defines things like classes and superclasses that one can use to efficiently define heterogenous agents. Conversely, if you are writing a script to download and clean texts, a functional paradigm maps better to the workflow of dealing with instances one at a time; get the raw data, apply various functions to clean it up, and save to a database or storage.</p>
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="col-sm-2 sidenav" style="position:fixed;top:15%;right:2%">
+
+        <br><br>
+      <p><a href="https://www.datacamp.com/courses/free-introduction-to-r">Data Camp R</a></p>
+      <p><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Data Camp Python</a></p>
+      <p><a href="https://sites.northwestern.edu/summerworkshops/">RCS workshops</a></p>
+      <br><br>
+
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>The Computing Essentials for Social Scientists training program is an initiative of Northwestern's Data Science Initiative and is supported by the<br>
+  <a href="https://ipr.northwestern.edu">Institute for Policy Research</a>,
+  <a href="https://nico.northwestern.edu">Institute on Complex Systems</a>, and
+  <a href="https://www.it.northwestern.edu/research/index.html"> Research Computing Services</a></p>
+</footer>
+
+</body>
+</html>
