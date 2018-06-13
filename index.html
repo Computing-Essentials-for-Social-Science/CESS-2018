@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>CESS-2018</title>
+  <title>CESS 2018</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -34,6 +34,7 @@
     .text-left {
         width:70%;
         font-size:1.25em;
+        padding-right: 4%;
     }
 
     /* Set black background color, white text and some padding */
@@ -58,7 +59,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" style="z-index: 1">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -66,15 +67,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">CESS</a>
+      <a class="navbar-brand" href="#">CESS 2018</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="/cess-syllabus.html">Syllabus</a></li>
-        <li><a href="/schedule.html">Schedule</a></li>
-        <li><a href="/lectures.html">Lectures</a></li>
-        <li><a href="/slides.htmml">Slides</a></li>
+        <li><a href="cess-syllabus.html">Syllabus</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="lectures.html">Lecture Slides</a></li>
         <li><a href="https://github.com/Computing-Essentials-for-Social-Science/CESS-2018">Github page</a></li>
       </ul>
 
@@ -88,15 +88,48 @@
         <p></p>
     </div>
     <div class="col-sm-8 text-left">
-      <h1>Computing Essentials for Social Science</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div style="font-size:1.2em;padding-bottom:15%;">
+        <br><br>
+        <h1>Computing Essentials for Social Scientists</h1>
+            <br>
+            <br>
+            <p>
+                The Computing Essentials for Social Scientists training program (or simply CESS) is a project of Northwestern's <a href="https://datascience.northwestern.edu">Data Science Initiative</a> being lead by the Initiative's Data Science Scholars <a href="http://sites.northwestern.edu/cskovron/"> Chris Skovron</a>, a political scientist, and <a href="http://www.jonatwell.com">Jon Atwell</a>, a sociologist. Among the many different options out there for learning programming basics, this program is unique in its emphasis on knowledge about the broader landscape of computation and the practices of programming that is traditionally acquired by many years of experience. Our hope is that understanding key aspects of that landscape can help those just starting or getting more serious about programming thrive in their academic work.
+            </p>
+            <br>
+            <br>
+            <p>
+                Of course learning the basics is still essential so CESS has partnered with Northwestern's Research Computing Services to offer a wide range of workshops, many of which will be lead by Dr. Skovron or Dr. Atwell. These workshops will cover the basics in both R and Python as well as several other key topics. Our hope is that by the time the summer workshops are done, all participants will know what they need to do to push their exciting research agendas forward.
+            </p>
+            <br>
+            <br>
+            <p>
+                This year's class has already been selected, by if you're interested in the materials please feel free to explore the materials hosted on this site or send us an email expressing interest in the program for summer 2019.
+            </p>
+            <br>
+            <br>
+            <p>
+                A syllabus and all other materials for the workshops are available via the navigation bar above.
+            </p>
 
-
+        </div>
     </div>
-    <div class="col-sm-2 sidenav">
-      <p><a href="https://www.datacamp.com/courses/free-introduction-to-r">Data Camp R tutorials</a></p>
-      <p><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Data Camp Python tutorials</a></p>
-      <p><a href="https://sites.northwestern.edu/summerworkshops/">Research Computing Services Workshops</a></p>
+    <div class="col-sm-2 sidenav" style="position:fixed;top:15%;right:2%">
+
+        <p><img src="https://cpb-us-east-1-juc1ugur1qwqqqo4.stackpathdns.com/sites.northwestern.edu/dist/a/1938/files/2017/09/IMG_1752-1976heh-e1508357516868-200x300.jpg" style="width:50%">
+            <br><h5>Chris Skovron, PhD.</h5>
+        </p>
+        <br>
+        <p>
+            <img src="atwellpic.png" style="width:50%">
+            <br><h5>Jon Atwell, PhD.</h5>
+        </p>
+        <br><br>
+      <p><a href="https://www.datacamp.com/courses/free-introduction-to-r">Data Camp R</a></p>
+      <p><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Data Camp Python</a></p>
+      <p><a href="https://sites.northwestern.edu/summerworkshops/">RCS workshops</a></p>
+      <br><br>
+
     </div>
   </div>
 </div>
