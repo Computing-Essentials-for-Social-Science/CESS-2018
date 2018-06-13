@@ -1,7 +1,7 @@
 ---
 title: "Computing Essentials for Social Scientists: Day One"
 author: |
-        | Christopher Skovron
+        | Jon Atwell \& Christopher Skovron
         | Northwestern University 
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: 
@@ -15,7 +15,6 @@ output:
 ---
           
           
-# Computing Essentials for Social Scientists
 
 
 ## Today
@@ -52,6 +51,12 @@ output:
 - At least four additional sessions. Intro R and Python count as two sessions. 
 - Optional but suggested to attend afternoon practice sessions for workshops. 
 - Participate in future data science programming put on by Data Science Initiative 
+
+## Program support
+- Jon and I will be mentors
+- We aren't here to debug but will help you strategize and find resources
+- Research Computing Services is another source of support 
+
 
 
 
