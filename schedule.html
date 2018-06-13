@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CESS 2018</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      position: fixed;
+      width:100%;
+      top:0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+        padding-top:5%;
+        height:auto;
+        width:100%
+        }
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      height: 100%;
+      width: 15%;
+      font-size:1.5em;
+    }
+
+    .text-left {
+        width:70%;
+        font-size:1.25em;
+        padding-right: 4%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      position: fixed;
+      width: 100%;
+      bottom:0;
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+
+    }
+
+    div.title {
+        text-align: center;
+        height: 40px;
+        background-color: white;
+        color: black;
+    }
+    table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        width: 100%;
+        }
+    th {
+        padding: 0 0.5em;
+        text-align: center;
+        background-color:gray;
+        color:white;
+        }
+    td  {
+        font-size: medium;
+        padding: 0.25em 0.25em;
+        width: 14%;
+        height: 140px;
+        vertical-align: top;
+        }
+    .date  {
+        font-size: large;
+        padding: 0.25em 0.25em;
+        text-align: left;
+        vertical-align: top;
+    }
+    .calname {
+        display: block;
+        text-align: center;
+        padding-top:.5em;
+        padding-bottom: .5em;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse"  style="z-index: 1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">CESS 2018</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cess-syllabus.html">Syllabus</a></li>
+        <li class="active"><a href="#">Schedule</a></li>
+        <li><a href="lectures.html">Lecture Slides</a></li>
+        <li><a href="https://github.com/Computing-Essentials-for-Social-Science/CESS-2018">Github page</a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+        <p></p>
+    </div>
+    <div class="col-sm-8 text-left">
+        <div style="font-size:1.2em;padding-bottom:15%;">
+<br><br>
+    <div class="title">
+    <h2>June 2018</h2>
+    </div>
+    <table border="1">
+    <tbody>
+    <tr>
+    <th width="20%">Mon</th>
+    <th width="20%">Tue</th>
+    <th width="20%">Wed</th>
+    <th width="20%">Thu</th>
+    <th width="20%">Fri</th>
+    </tr>
+    <tr>
+    <td><span class="date">18</span><br><span class="calname">CESS #1<br><a href="https://maps.northwestern.edu/facility/243">224 Parkes Hall</a></span></td>
+    <td><span class="date">19</span></td>
+    <td><span class="date">20</span><br><span class="calname">CESS #2<br><a href="https://maps.northwestern.edu/facility/243">224 Parkes Hall</a></span></td>
+    <td><span class="date">21</span><br><span class="calname">CESS #3<br><a href="https://maps.northwestern.edu/facility/243">224 Parkes Hall</a></span></td>
+    <td><span class="date">21</span></td>
+    </tr>
+    <tr>
+    <td><span class="date">25</span><br><span class="calname">
+    Intro to Programming with Python (1/3)<br><a href="https://maps.northwestern.edu/facility/214">ITW Classroom - Ford Design Center</a></span></span></td>
+    <td><span class="date">26</span><br><span class="calname">
+    R: Introduction (1/2)<br><a href="https://maps.northwestern.edu/facility/49">555 Clark - B01</a></span></td>
+    <td><span class="date">27</span><br><span class="calname">
+    Intro to Programming with Python (2/3)<br><a href="https://maps.northwestern.edu/facility/214">ITW Classroom - Ford Design Center</a></span></td>
+    <td><span class="date">28</span><br><span class="calname">
+    R: Introduction (2/2)<br><a href="https://maps.northwestern.edu/facility/49">555 Clark - B01</a></span></td>
+    <td><span class="date">29</span><br><span class="calname">
+    Intro to Programming with Python (3/3)<br><a href="https://maps.northwestern.edu/facility/214">ITW Classroom - Ford Design Center</a></span></td>
+    </tr>
+    </tbody>
+</table><br><br>
+    <div class="title">
+    <h2>July 2018</h2>
+    </div>
+    <table border="1">
+    <tbody>
+    <tr>
+    <th width="20%">Mon</th>
+    <th width="20%">Tue</th>
+    <th width="20%">Wed</th>
+    <th width="20%">Thu</th>
+    <th width="20%">Fri</th>
+    </tr>
+    <tr>
+    <td><span class="date">2</span></td>
+    <td><span class="date">3</span></td>
+    <td><span class="date">4</span></td>
+    <td><span class="date">5</span></td>
+    <td><span class="date">6</span><br><span class="calname">
+        R: Intro to Shiny<br><a href="https://www.library.northwestern.edu/visit/maps/mudd-library/index.html">Mudd Library 2124</a></span></td>
+    </tr>
+    <tr>
+    <td><span class="date">9</span><br><span class="calname">
+    Python: Data Visualization<br><a href="https://maps.northwestern.edu/facility/65">Chambers Hall, lower level</a></span></td>
+    <td><span class="date">10</span><br><span class="calname">
+    Python: Pandas<br><a href="https://maps.northwestern.edu/facility/65">Chambers Hall, lower level</a></span></td>
+    <td><span class="date">11</span><br><span class="calname">
+    Intro to Command Line<br><a href="https://maps.northwestern.edu/facility/65">Chambers Hall, lower level</a></span></td>
+    <td><span class="date">12</span><br><span class="calname">
+    Python: Pandas (CHI)<br><a href="https://maps.northwestern.edu/facility/1">Galter Library - Large classroom</a></span></td>
+    <td><span class="date">13</span></td>
+    </tr>
+    <tr>
+    <td><span class="date">16</span><br><span class="calname">
+    R: Intro to the Tidyverse (1/2)<br><a href="https://maps.northwestern.edu/facility/65">Chambers Hall, lower level</a></span></td>
+    <td><span class="date">17</span><br><span class="calname">
+    R: Refresher (CHI: AM)<br>
+    R: Visualization with ggplot2 (CHI: PM)<br><a href="https://maps.northwestern.edu/facility/1">Galter Library - Large classroom</a></span></td>
+    <td><span class="date">18</span><br><span class="calname">
+    R: Intro to the Tidyverse (2/2)<br><a href="https://maps.northwestern.edu/facility/65">Chambers Hall, lower level</a></span></td>
+    <td><span class="date">19</span><br><span class="calname">
+    Python: NumPy and SciPy (CHI)<br><a href="https://maps.northwestern.edu/facility/1">Galter Library - Large classroom</a></span></td>
+    <td><span class="date">20</span><br><span class="calname">
+    Python: NumPy and SciPy<br><a href="https://maps.northwestern.edu/facility/65">Chambers Hall, lower level</a></span></td>
+    </tr>
+    <tr>
+    <td><span class="date">23</span></td>
+    <td><span class="date">24</span><br><span class="calname">
+    R: Visualization with ggplot2<br><a href="https://maps.northwestern.edu/facility/214"> ITW Classroom - Ford Design Center</a></span></td>
+    <td><span class="date">25</span><br><span class="calname">
+    R: Statistical Modeling and Learning<br><a href="https://www.library.northwestern.edu/visit/maps/mudd-library/index.html">Mudd Library 2210</span></td>
+    <td><span class="date">26</span><br><span class="calname">
+    R: Statistical Models (CHI)<br><a href="https://maps.northwestern.edu/facility/2">Wieboldt Hall 506</a></span></td>
+    <td><span class="date">27</span><br><span class="calname">
+    Python: APIs and Web Requests<br><a href="https://maps.northwestern.edu/facility/65">Chambers Hall, lower level</a></span></td>
+    </tr>
+    <tr>
+    <td><span class="date">30</span><br><span class="calname">
+        Intro to Databases and SQL<br><a href="https://maps.northwestern.edu/facility/65">Chambers Hall, lower level</a></span></td>
+    <td><span class="date">31</span></td>
+    <td><span class="date"> </span></td>
+    <td><span class="date"> </span></td>
+    <td><span class="date"> </span></td>
+    </tr>
+    </tbody>
+</table><br><br>
+    <div class="title">
+    <h2>August 2018</h2>
+    </div>
+    <table border="1">
+    <tbody>
+    <tr>
+    <th width="20%">Mon</th>
+    <th width="20%">Tue</th>
+    <th width="20%">Wed</th>
+    <th width="20%">Thu</th>
+    <th width="20%">Fri</th>
+    </tr>
+    <tr>
+    <td><span class="date"> </span></td>
+    <td><span class="date"> </span></td>
+    <td><span class="date">1</span></td>
+    <td><span class="date">2</span></td>
+    <td><span class="date">3</span><br><span class="calname">
+    Python: Machine Learning with Scikit-learn<br><a href="https://maps.northwestern.edu/facility/65">Chambers Hall, lower level</a></span></td>
+    </tr>
+    <tr>
+    <td><span class="date">6</span></td>
+    <td><span class="date">7</span>
+    <td><span class="date">8</span><br><span class="calname">
+    Intro to ArcGIS<br><a href="https://www.library.northwestern.edu/visit/maps/mudd-library/index.html">Mudd Library 2210</span></td>
+    <td><span class="date">9</span><br><span class="calname">
+    Data Strategies<br><a href="https://maps.northwestern.edu/facility/65">Chambers Hall, lower level</a></span></td>
+    <td><span class="date">10</span></td>
+    </tr>
+    <tr>
+    <td><span class="date">13</span></td>
+    <td><span class="date">14</span></td>
+    <td><span class="date">15</span></td>
+    <td><span class="date">16</span><br><span class="calname">
+    Python: Preparing Text as Data<br><a href="https://maps.northwestern.edu/facility/65">Chambers Hall, lower level</a></span></td>
+    <td><span class="date">17</span></td>
+    </tr>
+    </tbody>
+    </table>
+
+
+
+        </div>
+    </div>
+    <div class="col-sm-2 sidenav" style="position:fixed;top:15%;right:2%">
+
+        <br><br>
+      <p><a href="https://www.datacamp.com/courses/free-introduction-to-r">Data Camp R</a></p>
+      <p><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Data Camp Python</a></p>
+      <p><a href="https://sites.northwestern.edu/summerworkshops/">RCS workshops</a></p>
+      <br><br>
+
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>The Computing Essentials for Social Scientists training program is an initiative of Northwestern's Data Science Initiative and is supported by the<br>
+  <a href="https://ipr.northwestern.edu">Institute for Policy Research</a>,
+  <a href="https://nico.northwestern.edu">Institute on Complex Systems</a>, and
+  <a href="https://www.it.northwestern.edu/research/index.html"> Research Computing Services</a></p>
+</footer>
+
+</body>
+</html>
