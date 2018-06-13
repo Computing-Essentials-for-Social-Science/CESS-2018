@@ -125,14 +125,6 @@ output:
 
 ## Working together is the way to nirvana
 - CESS is a community of students facing similar challenges and opportunities
-- It requires some vulnerability to admit that 
-
-
-
-
-
-
-
-
-
-
+- Working collaboratively on programming requires some vulnerability, but community is essential 
+- You should work on getting comfortable with asking peers for help 
+- You should share what you know and tricks you pick up with peers and with faculty 

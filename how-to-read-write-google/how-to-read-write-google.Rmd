@@ -21,7 +21,6 @@ output:
 - unless you are working in industry in a setting where things need to highly scale 
 
 ## In five years, you will look back on your past self's code and be horrified 
-- I am told this continues until death. 
 
 ## Reading and writing documents related to coding
 - You will be reading new kinds of documentation, vignettes, examples, error messages
@@ -46,6 +45,22 @@ We will address each of these goals in order.
 
 
 
+
+
+
+# Some resources to orient you to best practicies in writing code
+
+- Read points 1-8 of [this guide](https://www.r-bloggers.com/r-best-practices-r-you-writing-the-r-way/) (specific to R but applies to other languages)
+- [Hadley Wickham's R style guide](http://adv-r.had.co.nz/Style.html)
+- [Another good resource on R best practices.](https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R/)
+
+
+
+
+
+
+
+
 ## Pick good names
 - You might be tempted to use abbreviations or non-words to save yourself from typing the same characters over and over
 - With modern IDEs, tab completion means this is not a big issue
@@ -53,11 +68,37 @@ We will address each of these goals in order.
 - Name functions what they do, name variables what they are 
 
 
+## Good and bad names
+
+```{r, eval=FALSE}
+## a few bad variable names from my past work
+incspendtran
+gender # coded as one or zero
+
+
+## better names
+increase.spending.transportation
+female # coded 1 if female
+
+
+```
+
+## Similar variables should have similar names
+
+- For example, my candidates' perceptions of things alwas begin with `perc.`
+- Next, geography, are they perceiving district, `perc.district`, or state, `perc.state`
+- Sometimes they are perceiving opinion within a party: `perc.district.dem`
+- Then the issue: `perc.district.dem.marriage` means their district-level perception of support for same-sex marriage. `perc.district.guns.banassault` is district-level support for banning assault weapons. There's also `guns.background.check`....
+
+
+
+
 ## Principles of good commenting 
 
 - Don't comment things that are painfully obvious
 - But most things won't be painfully obvious 
 - Comment to introduce each new section of code or each major task 
+- If you write a new function 
 
 
 
@@ -66,12 +107,34 @@ We will address each of these goals in order.
 
 # How to find help
 
+## Expect to constantly be searching for help 
+
+
+
+
+## Build up a library of cheats 
+
+- Bookmark useful help pages
+- Make yourself a notebook of examples of code. Have a dropbox folder where you save snippets that do tasks you frequently do. 
+- I have things like group-level proportions that I frequently do for summary statistics 
+- Pillage old code for new projects (But be careful! You or your software has probably improved, so writing it anew could be a good learning experience and/or improve efficiency)
+
+
+
 ## Someone else has had your problem before 
 - You will almost never need to post your own question to a mailing list or to StackOverflow. 
-- Someone has had a similar problem before 
+- Someone has had a similar problem before, you just need to know how to 
 
 
+## Use built-in help
 
+```{r}
+?lm
+?read.csv
+?dplyr::rename
+```
 
+## Built-in help will
+- Tell you how functions work, to varying degrees of helpfulness 
 
 
