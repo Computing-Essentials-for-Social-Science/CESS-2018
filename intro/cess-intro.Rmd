@@ -36,10 +36,6 @@ output:
 - Studies public opinion and what people believe about it
 - Expertise: R, statistical modeling, causal inference
 
-## CESS students were chosen because
-- You already show creativity and promise in your research projects and ideas
-- Many of these projects could benefit from data science approaches 
-- You don't already know all the things we are going to teach
 
 ## We expect from you 
 - Sustained commitment to integrating data science methods in your research
@@ -56,6 +52,84 @@ output:
 - Jon and I will be mentors
 - We aren't here to debug but will help you strategize and find resources
 - Research Computing Services is another source of support 
+
+## What is data science? Why are we here?
+
+
+## Data Science means both everything and nothing
+
+
+## An etymology
+- Currently -- tools via computer science
+- At one point, stats 
+
+## Related concepts and disciplines
+- Information Science
+- "Big data"
+- Machine learning 
+
+
+## Northwestern Data Science Initiative definition
+- New analytic methods
+- New sources
+
+
+## How does this apply to social science?
+
+## New data sources
+- Text, tweets
+- More technical data used to analyze social behavior: satellite lights
+
+
+## New methods
+- A plethora of new text methods
+- Machine learning methods 
+
+
+## New scales 
+- Surveys are bigger and more frequent
+- People leave more traces of themselves online 
+- We can observe social behavior using new technologies 
+
+## Beware the hype
+- People have incentives to play up how fancy their data and methods are
+- Important to keep a critical eye to whether people are being honest about why they use the data they do and the method they do
+- Don't become a data science supremacist
+- OLS is often just as good and orders of magnitude simpler than fancy methods! 
+
+
+
+
+## Pitfalls for inference
+- Just because you have the full population doesn't mean you can speak to causality, etc
+- Big data doesn't mean your findings are generalizable 
+
+
+## Why are we here? 
+
+## CESS students were chosen because
+- You already show creativity and promise in your research projects and ideas
+- Many of these projects could benefit from data science approaches 
+- You don't already know all the things we are going to teach
+
+## Much of what we are working on in CESS is not really taught anywhere in the social sciences 
+- We focus on statistics in methods classes, which is great
+- But doing that at the scale required for data science requires organization and an understanding of how computing works 
+- Most of us in social science don't have extensive programming experience 
+- This is tacit knowledge Chris and Jon learned the hard way. We want to help you make it through this thicket faster than we did
+
+## Principles for being successful in applying data science to social science
+- Get organized
+- Know the landscape of available tools and resources
+- Understand how to teach yourself
+
+## Working together is the way to nirvana
+- CESS is a community of students facing similar challenges and opportunities
+- It requires some vulnerability to admit that 
+
+
+
+
 
 
 
