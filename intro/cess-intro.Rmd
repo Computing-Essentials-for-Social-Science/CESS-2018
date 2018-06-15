@@ -61,7 +61,7 @@ output:
 
 ## An etymology
 - Currently -- tools via computer science
-- At one point, stats 
+- At one point, tools via statistics 
 
 ## Related concepts and disciplines
 - Information Science
@@ -72,19 +72,20 @@ output:
 ## Northwestern Data Science Initiative definition
 - New analytic methods
 - New sources
-
+- Defined relative to what has historically been typical in disciplines 
 
 ## How does this apply to social science?
 
 ## New data sources
 - Text, tweets
+- Experiments conducted online, in the field at scale 
 - More technical data used to analyze social behavior: satellite lights
 
 
 ## New methods
 - A plethora of new text methods
 - Machine learning methods 
-
+- Fine-grained measurement (geolocations, etc)
 
 ## New scales 
 - Surveys are bigger and more frequent
@@ -95,14 +96,17 @@ output:
 - People have incentives to play up how fancy their data and methods are
 - Important to keep a critical eye to whether people are being honest about why they use the data they do and the method they do
 - Don't become a data science supremacist
-- OLS is often just as good and orders of magnitude simpler than fancy methods! 
+- OLS is often just as good and orders of magnitude simpler than fancy methods!
+- It's important to have a good bullshit detector when working in this area 
 
 
 
 
 ## Pitfalls for inference
+- As social scientists, we need to remember that using new data science tools doesn't remove or obligations to do good research design
+- Bigger data or more computationally intensive approaches also present new challenges for transparency 
 - Just because you have the full population doesn't mean you can speak to causality, etc
-- Big data doesn't mean your findings are generalizable 
+- Big data doesn't always mean your findings are generalizable 
 
 
 ## Why are we here? 
@@ -123,8 +127,10 @@ output:
 - Know the landscape of available tools and resources
 - Understand how to teach yourself
 
-## Working together is the way to nirvana
+## Working together is a key
 - CESS is a community of students facing similar challenges and opportunities
 - Working collaboratively on programming requires some vulnerability, but community is essential 
 - You should work on getting comfortable with asking peers for help 
 - You should share what you know and tricks you pick up with peers and with faculty 
+
+

@@ -3,16 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="dcterms.date" content="2018-06-15" />
-  <title>Computing Essentials for Social Scientists: Day One</title>
+  <meta name="dcterms.date" content="2018-06-13" />
+  <title>How to Read, Write, and Google for Success in Coding</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="cess-intro_files/reveal.js-3.3.0.1/css/reveal.css"/>
+  <link rel="stylesheet" href="how-to-read-write-google_files/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #0000ff; } /* Keyword */
+code > span.ch { color: #008080; } /* Char */
+code > span.st { color: #008080; } /* String */
+code > span.co { color: #008000; } /* Comment */
+code > span.ot { color: #ff4000; } /* Other */
+code > span.al { color: #ff0000; } /* Alert */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #008000; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #008080; } /* SpecialChar */
+code > span.vs { color: #008080; } /* VerbatimString */
+code > span.ss { color: #008080; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #0000ff; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #ff4000; } /* Preprocessor */
+code > span.do { color: #008000; } /* Documentation */
+code > span.an { color: #008000; } /* Annotation */
+code > span.cv { color: #008000; } /* CommentVar */
+code > span.at { } /* Attribute */
+code > span.in { color: #008000; } /* Information */
+</style>
 
-<link rel="stylesheet" href="cess-intro_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="how-to-read-write-google_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
 
 
   <!-- some tweaks to reveal css -->
@@ -449,183 +481,114 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 <section>
-    <h1 class="title">Computing Essentials for Social Scientists: Day One</h1>
-    <h2 class="author"><div style="white-space: pre-line;">Jon Atwell &amp; Christopher Skovron
+    <h1 class="title">How to Read, Write, and Google for Success in Coding</h1>
+    <h2 class="author"><div style="white-space: pre-line;">Christopher Skovron
 Northwestern University</div></h2>
-    <h3 class="date">June 15, 2018</h3>
+    <h3 class="date">June 13, 2018</h3>
 </section>
 
-<section id="today" class="slide level2">
-<h2>Today</h2>
+<section id="you-probably-hear-a-lot-about-clean-code" class="slide level2">
+<h2>You probably hear a lot about “clean” code</h2>
+</section>
+<section id="most-of-that-is-bullshit-and-pandering" class="slide level2">
+<h2>Most of that is bullshit and pandering</h2>
 <ul>
-<li>Introductions</li>
-<li>Program Requirements</li>
-<li>What is data science? What do we hope to get out of this?</li>
-<li>Python vs R</li>
-<li>What do you need to learn and not learn to succeed with data science</li>
+<li>unless you are working in industry in a setting where things need to highly scale</li>
 </ul>
 </section>
-<section id="lets-get-to-know-one-another" class="slide level2">
-<h2>Let’s get to know one another</h2>
+<section id="in-five-years-you-will-look-back-on-your-past-selfs-code-and-be-horrified" class="slide level2">
+<h2>In five years, you will look back on your past self’s code and be horrified</h2>
 </section>
-<section id="jon-atwell" class="slide level2">
-<h2>Jon Atwell</h2>
+<section id="reading-and-writing-documents-related-to-coding" class="slide level2">
+<h2>Reading and writing documents related to coding</h2>
 <ul>
-<li>Michigan PhD, 2017 - Sociology</li>
-<li>Studies the emergence of culture and norms</li>
-<li>Expertise: Python, text methods, agent-based modeling</li>
+<li>You will be reading new kinds of documentation, vignettes, examples, error messages</li>
+<li>These will seem confusing at first</li>
+<li>There are strategies, bu tnothing can beat practice</li>
 </ul>
 </section>
-<section id="chris-skovron" class="slide level2">
-<h2>Chris Skovron</h2>
+<section id="your-goals-in-writing-code-are-more-modest" class="slide level2">
+<h2>Your goals in writing code are more modest</h2>
 <ul>
-<li>Michigan PhD, 2017 - Political Science</li>
-<li>Studies public opinion and what people believe about it</li>
-<li>Expertise: R, statistical modeling, causal inference</li>
+<li>Does this do what I need it to do in a reasonably computationally efficient manner?</li>
+<li>Will my future self understand it?</li>
+<li>Will my collaborators and/or replicators understand it?</li>
+<li>Have I written in such a way that will prevent me from making mistakes? We will address each of these goals in order.</li>
 </ul>
 </section>
-<section id="we-expect-from-you" class="slide level2">
-<h2>We expect from you</h2>
+<section><section id="how-to-read-documentation" class="titleslide slide level1"><h1>How to read documentation</h1></section></section>
+<section><section id="how-to-comment-codebeing-kind-to-your-future-self" class="titleslide slide level1"><h1>How to comment code/being kind to your future self</h1></section></section>
+<section><section id="some-resources-to-orient-you-to-best-practicies-in-writing-code" class="titleslide slide level1"><h1>Some resources to orient you to best practicies in writing code</h1></section><section id="pick-good-names" class="slide level2">
+<h2>Pick good names</h2>
 <ul>
-<li>Sustained commitment to integrating data science methods in your research</li>
-<li>Be a resource for your colleagues, both students and faculty</li>
-<li>Be flexible, open to struggling and learning new things about yourself and your research</li>
+<li>You might be tempted to use abbreviations or non-words to save yourself from typing the same characters over and over</li>
+<li>With modern IDEs, tab completion means this is not a big issue</li>
+<li>Choose names that are legible, clear, and precise</li>
+<li>Name functions what they do, name variables what they are</li>
 </ul>
-</section>
-<section id="program-requirements" class="slide level2">
-<h2>Program requirements</h2>
+</section><section id="good-and-bad-names" class="slide level2">
+<h2>Good and bad names</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## a few bad variable names from my past work
+incspendtran
+gender <span class="co"># coded as one or zero</span>
+
+
+## better names
+increase.spending.transportation
+female <span class="co"># coded 1 if female</span></code></pre></div>
+</section><section id="similar-variables-should-have-similar-names" class="slide level2">
+<h2>Similar variables should have similar names</h2>
 <ul>
-<li>Three sessions this week</li>
-<li>At least four additional sessions. Intro R and Python count as two sessions.</li>
-<li>Optional but suggested to attend afternoon practice sessions for workshops.</li>
-<li>Participate in future data science programming put on by Data Science Initiative</li>
+<li>For example, my candidates’ perceptions of things alwas begin with <code>perc.</code></li>
+<li>Next, geography, are they perceiving district, <code>perc.district</code>, or state, <code>perc.state</code></li>
+<li>Sometimes they are perceiving opinion within a party: <code>perc.district.dem</code></li>
+<li>Then the issue: <code>perc.district.dem.marriage</code> means their district-level perception of support for same-sex marriage. <code>perc.district.guns.banassault</code> is district-level support for banning assault weapons. There’s also <code>guns.background.check</code>….</li>
 </ul>
-</section>
-<section id="program-support" class="slide level2">
-<h2>Program support</h2>
+</section><section id="principles-of-good-commenting" class="slide level2">
+<h2>Principles of good commenting</h2>
 <ul>
-<li>Jon and I will be mentors</li>
-<li>We aren’t here to debug but will help you strategize and find resources</li>
-<li>Research Computing Services is another source of support</li>
+<li>Don’t comment things that are painfully obvious</li>
+<li>But most things won’t be painfully obvious</li>
+<li>Comment to introduce each new section of code or each major task</li>
+<li>If you write a new function</li>
 </ul>
-</section>
-<section id="what-is-data-science-why-are-we-here" class="slide level2">
-<h2>What is data science? Why are we here?</h2>
-</section>
-<section id="data-science-means-both-everything-and-nothing" class="slide level2">
-<h2>Data Science means both everything and nothing</h2>
-</section>
-<section id="an-etymology" class="slide level2">
-<h2>An etymology</h2>
+</section></section>
+<section><section id="how-to-find-help" class="titleslide slide level1"><h1>How to find help</h1></section><section id="expect-to-constantly-be-searching-for-help" class="slide level2">
+<h2>Expect to constantly be searching for help</h2>
 <ul>
-<li>Currently – tools via computer science</li>
-<li>At one point, tools via statistics</li>
+<li>There’s way too much to remember, we offload that knowledge to the internet and elsewhere</li>
+<li></li>
 </ul>
-</section>
-<section id="related-concepts-and-disciplines" class="slide level2">
-<h2>Related concepts and disciplines</h2>
+</section><section id="build-up-a-library-of-cheats" class="slide level2">
+<h2>Build up a library of cheats</h2>
 <ul>
-<li>Information Science</li>
-<li>“Big data”</li>
-<li>Machine learning</li>
+<li>Bookmark useful help pages</li>
+<li>Make yourself a notebook of examples of code. Have a dropbox folder where you save snippets that do tasks you frequently do.</li>
+<li>I have things like group-level proportions that I frequently do for summary statistics</li>
+<li>Pillage old code for new projects (But be careful! You or your software has probably improved, so writing it anew could be a good learning experience and/or improve efficiency)</li>
 </ul>
-</section>
-<section id="northwestern-data-science-initiative-definition" class="slide level2">
-<h2>Northwestern Data Science Initiative definition</h2>
+</section><section id="someone-else-has-had-your-problem-before" class="slide level2">
+<h2>Someone else has had your problem before</h2>
 <ul>
-<li>New analytic methods</li>
-<li>New sources</li>
-<li>Defined relative to what has historically been typical in disciplines</li>
+<li>You will almost never need to post your own question to a mailing list or to StackOverflow.</li>
+<li>Someone has had a similar problem before, you just need to know how to</li>
 </ul>
-</section>
-<section id="how-does-this-apply-to-social-science" class="slide level2">
-<h2>How does this apply to social science?</h2>
-</section>
-<section id="new-data-sources" class="slide level2">
-<h2>New data sources</h2>
+</section><section id="use-built-in-help" class="slide level2">
+<h2>Use built-in help</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?lm
+?read.csv
+?dplyr<span class="op">::</span>rename</code></pre></div>
+</section><section id="built-in-help-will" class="slide level2">
+<h2>Built-in help will</h2>
 <ul>
-<li>Text, tweets</li>
-<li>Experiments conducted online, in the field at scale</li>
-<li>More technical data used to analyze social behavior: satellite lights</li>
+<li>Tell you how functions work, to varying degrees of helpfulness</li>
 </ul>
-</section>
-<section id="new-methods" class="slide level2">
-<h2>New methods</h2>
-<ul>
-<li>A plethora of new text methods</li>
-<li>Machine learning methods</li>
-<li>Fine-grained measurement (geolocations, etc)</li>
-</ul>
-</section>
-<section id="new-scales" class="slide level2">
-<h2>New scales</h2>
-<ul>
-<li>Surveys are bigger and more frequent</li>
-<li>People leave more traces of themselves online</li>
-<li>We can observe social behavior using new technologies</li>
-</ul>
-</section>
-<section id="beware-the-hype" class="slide level2">
-<h2>Beware the hype</h2>
-<ul>
-<li>People have incentives to play up how fancy their data and methods are</li>
-<li>Important to keep a critical eye to whether people are being honest about why they use the data they do and the method they do</li>
-<li>Don’t become a data science supremacist</li>
-<li>OLS is often just as good and orders of magnitude simpler than fancy methods!</li>
-<li>It’s important to have a good bullshit detector when working in this area</li>
-</ul>
-</section>
-<section id="pitfalls-for-inference" class="slide level2">
-<h2>Pitfalls for inference</h2>
-<ul>
-<li>As social scientists, we need to remember that using new data science tools doesn’t remove or obligations to do good research design</li>
-<li>Bigger data or more computationally intensive approaches also present new challenges for transparency</li>
-<li>Just because you have the full population doesn’t mean you can speak to causality, etc</li>
-<li>Big data doesn’t always mean your findings are generalizable</li>
-</ul>
-</section>
-<section id="why-are-we-here" class="slide level2">
-<h2>Why are we here?</h2>
-</section>
-<section id="cess-students-were-chosen-because" class="slide level2">
-<h2>CESS students were chosen because</h2>
-<ul>
-<li>You already show creativity and promise in your research projects and ideas</li>
-<li>Many of these projects could benefit from data science approaches</li>
-<li>You don’t already know all the things we are going to teach</li>
-</ul>
-</section>
-<section id="much-of-what-we-are-working-on-in-cess-is-not-really-taught-anywhere-in-the-social-sciences" class="slide level2">
-<h2>Much of what we are working on in CESS is not really taught anywhere in the social sciences</h2>
-<ul>
-<li>We focus on statistics in methods classes, which is great</li>
-<li>But doing that at the scale required for data science requires organization and an understanding of how computing works</li>
-<li>Most of us in social science don’t have extensive programming experience</li>
-<li>This is tacit knowledge Chris and Jon learned the hard way. We want to help you make it through this thicket faster than we did</li>
-</ul>
-</section>
-<section id="principles-for-being-successful-in-applying-data-science-to-social-science" class="slide level2">
-<h2>Principles for being successful in applying data science to social science</h2>
-<ul>
-<li>Get organized</li>
-<li>Know the landscape of available tools and resources</li>
-<li>Understand how to teach yourself</li>
-</ul>
-</section>
-<section id="working-together-is-a-key" class="slide level2">
-<h2>Working together is a key</h2>
-<ul>
-<li>CESS is a community of students facing similar challenges and opportunities</li>
-<li>Working collaboratively on programming requires some vulnerability, but community is essential</li>
-<li>You should work on getting comfortable with asking peers for help</li>
-<li>You should share what you know and tricks you pick up with peers and with faculty</li>
-</ul>
-</section>
+</section></section>
     </div>
   </div>
 
-  <script src="cess-intro_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
-  <script src="cess-intro_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+  <script src="how-to-read-write-google_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="how-to-read-write-google_files/reveal.js-3.3.0.1/js/reveal.js"></script>
 
   <script>
 
