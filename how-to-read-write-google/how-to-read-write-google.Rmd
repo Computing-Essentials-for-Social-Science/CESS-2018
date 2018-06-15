@@ -137,7 +137,7 @@ female # coded 1 if female
 
 ## Use built-in help
 
-```{r}
+```{r, eval = FALSE}
 ?lm
 ?read.csv
 ?dplyr::rename

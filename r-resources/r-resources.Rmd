@@ -1,0 +1,64 @@
+---
+title: "Tips for Learning (and Learning to Love) R"
+author: "Christopher Skovron"
+date: "6/11/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This document compiles some of my favorite resources for learning and mastering R. 
+
+
+# What is R? 
+
+R is an open-source language for statistical programming. Its origins are in an older language called S. Unlike many other programming languages, R's primary function is for statistics, so it plays well with matrices and other common data structures. Because of its open-source structure, R is extended by packages contributed by the user community. "Base R," the functions that ship with R when you download it from CRAN (the Comprehensive R Archive Network), is sufficient to carry out a lot of statistical programming tasks, the power is in others' packages. The upshot is that a lot of what you will need to learn to do in R has already been programmed and documented by someone else. Stitching together these packages and functions into an efficient workflow will be one of your main tasks. 
+
+
+The good news is you are coming to R at one of the best times in its development. For a long time, R was clunky and difficult to learn and master. (You will still probably feel like it is )
+
+In the past few years, the R ecosystem has developed a central organizing entity: RStudio and associated programmers, chiefly Hadley Wickham. RStudio is a software program and a company that coordinates the development of packages and other resources for R users. They make money by selling their products to businesses for use at scale. As an indiviudal user, you get the benefits for free. 
+
+The most important R product is the RStudio software, which is free and should be where your work in R takes place. You can work with R in the command line or in a very basic GUI provided by CRAN, but you really should be working in RStudio now, as it has a lot of features that will make your life easier as you code. 
+
+RStudio has [cheat sheets for a number of useful R tasks](https://www.rstudio.com/resources/cheatsheets/) that are great to print out and have on hand. 
+
+
+# Cool stuff you can do with R 
+
+## R Markdown 
+
+R Markdown is an incredible product that lets you write reports and articles using R code chunks interspersed with your text. It's extremely versatile and can produce slides using HTML5 or Beamer, plays nicely with \latex code, and is well-documented for a lot of typesetting tasks. You can write your reports and execute your code all in the same window, so there's no copying and pasting. This makes your documents highly reproducible, limits the chance of making mistakes, and makes it easy to update your documents as you change code. 
+
+Learn more about R Markdown at [its excellent homepage.](https://rmarkdown.rstudio.com/lesson-1.html)
+
+
+## Graphics
+
+I think it's fair to say that it's commonly accepted that `ggplot2` makes the best-looking graphics of any statistical program. It's built on a "grammar of graphics" invented by Hadley Wickham that has a learning curve, to be sure, but is really flexible once you're comfortable with it. You can make a huge number of plots with it, so set yourself some time to pour over its documentation [here.](http://ggplot2.tidyverse.org/reference/index.html) 
+
+
+## Interactives
+
+RStudio has a product called Shiny, which allows you to create interactives that run on R code. It is relatively easy to learn Shiny and create your own interactives. [Here's a power calculator made using Shiny.](https://egap.shinyapps.io/Power_Calculator/)
+
+
+
+# Places to browse online
+
+We are going to work off of Wickham and Grolemund's [**R for Data Science**](http://r4ds.had.co.nz/) in my tidyverse workshop, but it's worth reading and working through on your own. Their tidy approach is the best way to work in R, and this book is a complete introduction that can teach you all the necessary aspects of an R workflow. 
+
+[Stack Overflow has a ton of R resources compiled here.](https://stackoverflow.com/tags/r/info)
+
+
+[Jared Knowles' guide to writing a minimal working example to ask for help.](https://www.jaredknowles.com/journal/2013/5/27/writing-a-minimal-working-example-mwe-in-r)
+
+
+
+
+
+
+
+
