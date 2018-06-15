@@ -29,7 +29,7 @@ output:
 ## Jon Atwell
 - Michigan PhD, 2017 - Sociology
 - Studies the emergence of culture and norms
-- Expertise: Python, text methods, agent-based modeling
+- Expertise: Python, text methods, agent-based modeling, experiments
 
 ## Chris Skovron 
 - Michigan PhD, 2017 - Political Science
