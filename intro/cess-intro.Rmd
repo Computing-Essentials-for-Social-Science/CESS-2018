@@ -231,7 +231,7 @@ Why? (more on Day 2)<br>
 
 ## Correct emphasis: Reproducibility
   - organized so others can reproduce result<br>
-  <span class="fragment" data-fragment-index="1">- but working code not the same as...</span>
+  <span class="fragment" data-fragment-index="1">- but working code not the same as.  ..</span>
 
 ## Correct emphasis: Replicability
   - logic of code is clear
