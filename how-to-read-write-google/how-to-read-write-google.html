@@ -529,7 +529,7 @@ Northwestern University</div></h2>
 <h2>Good and bad names</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## a few bad variable names from my past work
 incspendtran
-gender <span class="co"># coded as one or zero</span>
+gender <span class="co"># if coded as one or zero, as a factor I&#39;d accept this </span>
 
 
 ## better names
@@ -542,6 +542,7 @@ female <span class="co"># coded 1 if female</span></code></pre></div>
 <li>Next, geography, are they perceiving district, <code>perc.district</code>, or state, <code>perc.state</code></li>
 <li>Sometimes they are perceiving opinion within a party: <code>perc.district.dem</code></li>
 <li>Then the issue: <code>perc.district.dem.marriage</code> means their district-level perception of support for same-sex marriage. <code>perc.district.guns.banassault</code> is district-level support for banning assault weapons. There’s also <code>guns.background.check</code>….</li>
+<li>This lets me use things like <code>grep()</code> to grab variables that are similar</li>
 </ul>
 </section><section id="principles-of-good-commenting" class="slide level2">
 <h2>Principles of good commenting</h2>
@@ -562,9 +563,26 @@ female <span class="co"># coded 1 if female</span></code></pre></div>
 <h2>Do due diligence before googling aimlessly</h2>
 <ul>
 <li>You may be able to google a solution, but that is sort of the being-given-a-fish way. You want to learn to fish.</li>
+<li>The best ways to teach yourself are to code a lot and read a lot of examples</li>
 </ul>
-</section></section>
-<section><section id="how-to-read-documentation" class="titleslide slide level1"><h1>How to read documentation</h1></section><section id="build-up-a-library-of-cheats" class="slide level2">
+</section><section id="steal-intelligently" class="slide level2">
+<h2>Steal intelligently</h2>
+<ul>
+<li>Figure out who’s doing similar tasks to you and look for tutorials online</li>
+<li>Steal people’s replication code (But be critical of it!)</li>
+</ul>
+</section><section id="how-to-read-documentation" class="slide level2">
+<h2>How to read documentation</h2>
+<ul>
+<li>Most documentation will show you a function and various <em>parameters</em></li>
+<li>It’s important to understand different classes of data structures and variable classes</li>
+</ul>
+</section><section id="find-vignettes-and-lessons-written-by-others" class="slide level2">
+<h2>Find vignettes and lessons written by others</h2>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/broom/vignettes/broom.html">An example of a nice package vignette, for <code>broom</code></a></li>
+</ul>
+</section><section id="build-up-a-library-of-cheats" class="slide level2">
 <h2>Build up a library of cheats</h2>
 <ul>
 <li>Bookmark useful help pages</li>
@@ -593,10 +611,15 @@ female <span class="co"># coded 1 if female</span></code></pre></div>
 </ul>
 </section><section id="figuring-out-your-google-query" class="slide level2">
 <h2>Figuring out your google query</h2>
+<ul>
+<li>Most of the time, you’re going to want to end up on StackOverflow. Often it’s good just to search within SO</li>
+<li>As a rule of thumb, some sort of action-verb</li>
+</ul>
 </section><section id="asking-for-help" class="slide level2">
 <h2>Asking for help</h2>
 <ul>
-<li>You will want a “minimal workable example”</li>
+<li>You will want a “minimal working example”</li>
+<li><a href="https://www.jaredknowles.com/journal/2013/5/27/writing-a-minimal-working-example-mwe-in-r">Here’s a good guide for writing one in R from Jared Knowles</a></li>
 </ul>
 </section></section>
     </div>
