@@ -68,7 +68,7 @@ We will address each of these goals in order.
 ```{r, eval=FALSE}
 ## a few bad variable names from my past work
 incspendtran
-gender # coded as one or zero
+gender # if coded as one or zero, as a factor I'd accept this 
 
 
 ## better names
@@ -84,6 +84,7 @@ female # coded 1 if female
 - Next, geography, are they perceiving district, `perc.district`, or state, `perc.state`
 - Sometimes they are perceiving opinion within a party: `perc.district.dem`
 - Then the issue: `perc.district.dem.marriage` means their district-level perception of support for same-sex marriage. `perc.district.guns.banassault` is district-level support for banning assault weapons. There's also `guns.background.check`....
+- This lets me use things like `grep()` to grab variables that are similar 
 
 
 
@@ -112,13 +113,22 @@ female # coded 1 if female
 ## Do due diligence before googling aimlessly
 
 - You may be able to google a solution, but that is sort of the being-given-a-fish way. You want to learn to fish. 
+- The best ways to teach yourself are to code a lot and read a lot of examples
 
 
-# How to read documentation
+## Steal intelligently
+- Figure out who's doing similar tasks to you and look for tutorials online
+- Steal people's replication code (But be critical of it!)
 
 
+## How to read documentation
+- Most documentation will show you a function and various *parameters*
+- It's important to understand different classes of data structures and variable classes 
 
 
+## Find vignettes and lessons written by others 
+
+- [An example of a nice package vignette, for `broom`](https://cran.r-project.org/web/packages/broom/vignettes/broom.html)
 
 ## Build up a library of cheats 
 
@@ -150,11 +160,14 @@ female # coded 1 if female
 
 ## Figuring out your google query
 
-
+- Most of the time, you're going to want to end up on StackOverflow. Often it's good just to search within SO
+- As a rule of thumb, some sort of action-verb 
 
 
 ## Asking for help
-- You will want a "minimal workable example"
+- You will want a "minimal working example"
+- [Here's a good guide for writing one in R from Jared Knowles](https://www.jaredknowles.com/journal/2013/5/27/writing-a-minimal-working-example-mwe-in-r)
+
 
 
 
