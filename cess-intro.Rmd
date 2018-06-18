@@ -13,6 +13,7 @@ output:
     #css: reveal.css
     self_contained: false
     reveal_plugins: ["notes"]
+    lib_dir: revealjs_core
 ---
           
           
