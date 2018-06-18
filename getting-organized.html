@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="revealjs_core/reveal.js-3.3.0.1/css/reveal.css"/>
+  <link rel="stylesheet" href="reveal.js-3.3.0.1/css/reveal.css"/>
 
 
 <style type="text/css">
@@ -44,7 +44,7 @@ code > span.at { } /* Attribute */
 code > span.in { color: #008000; } /* Information */
 </style>
 
-<link rel="stylesheet" href="revealjs_core/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
 
 
   <!-- some tweaks to reveal css -->
@@ -482,13 +482,31 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 <section>
     <h1 class="title">Getting Organized to Do Data Science</h1>
-    <h2 class="author"><div style="white-space: pre-line;">Christopher Skovron
+    <h2 class="author"><div style="white-space: pre-line;">Christopher Skovron &amp; Jon Atwell
 Northwestern University</div></h2>
     <h3 class="date">June 18, 2018</h3>
 </section>
 
 <section id="get-organized" class="slide level2">
 <h2>Get organized</h2>
+</section>
+<section id="automate-everything-that-can-be-automated" class="slide level2">
+<h2>Automate everything that can be automated</h2>
+<ul>
+<li>Saves yourself time</li>
+<li>Prevents mistakes</li>
+<li>Sometimes comes at the cost of more time up front and code readability</li>
+</ul>
+</section>
+<section id="dont-repeat-yourself" class="slide level2">
+<h2>DON’T REPEAT YOURSELF</h2>
+</section>
+<section id="dont-copy-and-paste" class="slide level2">
+<h2>Don’t copy and paste</h2>
+<ul>
+<li>Call things from where they are stored</li>
+<li>Typically, this will be on your disk or on some remote/cloud disk you can access from your machine</li>
+</ul>
 </section>
 <section id="understand-your-file-structure" class="slide level2">
 <h2>Understand your file structure</h2>
@@ -516,6 +534,14 @@ Northwestern University</div></h2>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
 </section>
 <section id="navigating-relational-paths" class="slide level2">
+<h2>Navigating, relational paths</h2>
+<ul>
+<li>After you set your working directory, you’ll want to use it to navigate around</li>
+<li>Typically in your program, you can refer to anything in the working directory without prefacing it with anything</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dat &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;some-file-in-your-working-directory.csv&quot;</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</code></pre></div>
+</section>
+<section id="navigating-relational-paths-1" class="slide level2">
 <h2>Navigating, relational paths</h2>
 </section>
 <section id="good-organizational-principles" class="slide level2">
@@ -697,9 +723,6 @@ make.party.proportions.for.level &lt;-<span class="st"> </span><span class="cf">
 <li>Requires special tools, usually SQL</li>
 </ul>
 </section>
-<section id="dont-repeat-yourself" class="slide level2">
-<h2>DON’T REPEAT YOURSELF</h2>
-</section>
 <section id="where-to-work-development-environments" class="slide level2">
 <h2>Where to work? Development environments</h2>
 <p>What folders should you have</p>
@@ -707,8 +730,8 @@ make.party.proportions.for.level &lt;-<span class="st"> </span><span class="cf">
     </div>
   </div>
 
-  <script src="revealjs_core/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
-  <script src="revealjs_core/reveal.js-3.3.0.1/js/reveal.js"></script>
+  <script src="reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="reveal.js-3.3.0.1/js/reveal.js"></script>
 
   <script>
 
