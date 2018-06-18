@@ -17,8 +17,6 @@ output:
           
 ## Get organized
 
-- Doing Data Science 
-
 
 
 ## Understand your file structure
@@ -28,6 +26,25 @@ output:
 
 
 ## Setting a working directory
+- Each script should have a "working directory"
+- This is where your program will search for files referenced in the script, write any files you create using the script, etc.
+- R: 
+```{r, eval = FALSE}
+setwd("/Users/cskovron/Dropbox/Research/ncs-constituent-eval/analysis")
+# on Mac is equivalent to
+setwd("~/Dropbox/Research/ncs-constituent-eval/analysis")
+```
+- Python:
+```{python, eval = FALSE}
+
+```
+- Command line:
+```{bash, eval = FALSE}
+
+```
+
+
+
 
 
 ## Navigating, relational paths
@@ -41,8 +58,15 @@ output:
 
 ## One script per task
 
+- In general, each scipt should do a specific high-level task
+- Figuring out where to break up scripts is more of an art than a science, but some rules of thumb 
+- If you are at a point in your workflow where it would make sense to save something - a dataset, a model object, a few figures, etc, 
+
 
 ## Mind the order 
+- Complex tasks will require multiple scripts
+- Use organizing tools like RStudio's Projects
+- Number scripts in order: `0_clean_data.R`, `1_merge_census_data.R`, `3_fit_multilevel models.R`
 
 
 ## Your audiences, in decreasing order
@@ -56,12 +80,131 @@ output:
 
 - Messages to all of your audiences 
 - Say what you're doing in plain words and why you're doing it
+- People differ a lot in their commenting preferences
+- Find what's comfortable for you, let it evolve
+- A good rule of thumb - if it's not obvious what's going on from a quick skim of the code, comment it 
+
+## Introduce each new subsection of code with a comment
+
+```{r, eval = FALSE}
+# plot partisan estimates against one another
+# voters only
+g = ggplot(ncs, aes(voted.pid7.dem)) +
+  geom_density(color = 'blue') + 
+  theme_classic() +
+  theme(legend.position='none') +
+  xlim(0,1) +
+  theme(axis.title=element_text(size=8), plot.title = element_text(hjust=0.5, size = 10)) +
+  geom_density(aes(voted.pid7.rep), color = 'red') +
+  ggtitle("Distribution of electorate partisanship estimates") +
+  xlab("Percent of voters in district belonging to each party")
+
+ggsave('~/Dropbox/asymmetry/electoral-accountability/figures/partisan-electorate-estimate-densities.pdf',
+       g,
+       width = 4, height = 4, dpi = 400) 
+```
+
+## More examples of comments form my code
+
+```{r, eval = FALSE}
+# set up poststratification file and poststratify 2014 MRSP models 
+
+# level is upper or lower districts, pid.level is 3 or 7 point item 
+get.cell.predictions <- function(individual.model,
+                                 pid.var, # e.g., 'pid3.dem'
+                                 pstrat){
+  # district random effects need zeros for missing dists
+  district.ranefs <- ranef(individual.model)$modgeoid
+  missing.districts <- setdiff(unique(pstrat$modgeoid), rownames(district.ranefs))
+  missing.districts.df <- data.frame(district = missing.districts)
+  rownames(missing.districts.df) <- missing.districts.df$district
+  missing.districts.df$`(Intercept)` <- 0
+  missing.districts.df <- dplyr::select(missing.districts.df, -district)
+  district.ranefs <- rbind.data.frame(district.ranefs, missing.districts.df)
+  
+  # NOTE: make sure AK and HI is working
+  
+```
+
+## cont'd
+```{r, eval = FALSE}
+
+  cell.preds <- invlogit(
+    fixef(individual.model)["(Intercept)"] +
+      ranef(individual.model)$educ[pstrat$education, ] +
+      ranef(individual.model)$race[pstrat$race, ] +
+      ranef(individual.model)$gender[pstrat$gender, ] +
+      ranef(individual.model)$f.race[pstrat$f.race, ] +
+      ranef(individual.model)$educ.race[pstrat$educ.race, ] +
+      ranef(individual.model)$fips[as.character(pstrat$fips), ] +
+      district.ranefs[pstrat$modgeoid, ] +
+      fixef(individual.model)["medianhhincome"] * pstrat$medianhhincome +
+      fixef(individual.model)["obama.2012.twoparty"] * pstrat$obama.2012.twoparty
+  )
+  
+  return(cell.preds)
+}
+
+```
+
+## More comments from that R script
+
+```{r, eval = FALSE}
+
+# divide within proportions grouped by party
+# and district to get dist-party estimates 
+
+pstrat.upper = pstrat %>% 
+  dplyr::filter(grepl("U", modgeoid)) %>% 
+  cbind(upper.cell.predictions) %>% 
+  dplyr::select(-X)
+
+pstrat.lower = pstrat %>% 
+  dplyr::filter(grepl("L", modgeoid)) %>% 
+  cbind(lower.cell.predictions) %>% 
+  dplyr::select(-X)
+```
+
+
+## More
+
+```{r, eval = FALSE}
+
+# transform so the columns are "the percent 
+# of the [PARTY] in the district that falls in each cell 
+
+# lower
+make.party.proportions.for.level <- function(level) {
+  if(level=="upper") pstrat = pstrat.upper
+  if(level=="lower") pstrat = pstrat.lower
+  
+  party.proportions = data.frame(matrix(nrow = nrow(pstrat), ncol = length(party.id.vars)))
+  names(party.proportions) = party.id.vars
+  
+  for(i in 1:length(party.id.vars)){
+    pid <- party.id.vars[i]
+    
+    # models is in same order as party.id.vars above
+    pstrat[,pid] <- pstrat$proportion * pstrat[,pid]  }
+  
+    return(pstrat)
+}
+
+```
+
+
+## Commenting sounds easy in the abstract
+- You'll be cruising along writing code (no, really, eventually you will) and not feel like stopping to write comments
+- Things will seem really obvious when you write them despite being not obvious to those who come after, including your future self 
+
+
+
 
 
 
 ## Version control 
 
-- Simplest version -- lets you revert to the past
+- Simplest definition -- lets you revert to the past
 - Track changes made by collaborators
 - Document your contributions to code 
 
@@ -69,7 +212,8 @@ output:
 ## Version control options
 
 - Git/github
-- Dropbox version control
+- Dropbox
+- Collaboration is tough - live editing code for Python and R are coming but not common right now. More likely, one collaborator should be in a file at a time 
 
 
 
@@ -86,6 +230,22 @@ output:
 ## Wide data
 
 ## Relational data 
+- Some data has structures more complex than simple tables
+- For example, Netflix has a database where each user has a table of movies they've watched and a separate table for each movie of the users who have watched it
+- This is "relational data"
+- It's often, but not always, big 
+- Requires special tools, usually SQL 
+
+
+
+
+
+
+## DON'T REPEAT YOURSELF
+
+
+
+
 
 
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="dcterms.date" content="2018-06-11" />
+  <meta name="dcterms.date" content="2018-06-18" />
   <title>Getting Organized to Do Data Science</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -11,6 +11,38 @@
   <link rel="stylesheet" href="getting-organized_files/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #0000ff; } /* Keyword */
+code > span.ch { color: #008080; } /* Char */
+code > span.st { color: #008080; } /* String */
+code > span.co { color: #008000; } /* Comment */
+code > span.ot { color: #ff4000; } /* Other */
+code > span.al { color: #ff0000; } /* Alert */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #008000; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #008080; } /* SpecialChar */
+code > span.vs { color: #008080; } /* VerbatimString */
+code > span.ss { color: #008080; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #0000ff; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #ff4000; } /* Preprocessor */
+code > span.do { color: #008000; } /* Documentation */
+code > span.an { color: #008000; } /* Annotation */
+code > span.cv { color: #008000; } /* CommentVar */
+code > span.at { } /* Attribute */
+code > span.in { color: #008000; } /* Information */
+</style>
 
 <link rel="stylesheet" href="getting-organized_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
 
@@ -452,14 +484,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <h1 class="title">Getting Organized to Do Data Science</h1>
     <h2 class="author"><div style="white-space: pre-line;">Christopher Skovron
 Northwestern University</div></h2>
-    <h3 class="date">June 11, 2018</h3>
+    <h3 class="date">June 18, 2018</h3>
 </section>
 
 <section id="get-organized" class="slide level2">
 <h2>Get organized</h2>
-<ul>
-<li>Doing Data Science</li>
-</ul>
 </section>
 <section id="understand-your-file-structure" class="slide level2">
 <h2>Understand your file structure</h2>
@@ -469,6 +498,22 @@ Northwestern University</div></h2>
 </section>
 <section id="setting-a-working-directory" class="slide level2">
 <h2>Setting a working directory</h2>
+<ul>
+<li>Each script should have a “working directory”</li>
+<li>This is where your program will search for files referenced in the script, write any files you create using the script, etc.</li>
+<li>R:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setwd</span>(<span class="st">&quot;/Users/cskovron/Dropbox/Research/ncs-constituent-eval/analysis&quot;</span>)
+<span class="co"># on Mac is equivalent to</span>
+<span class="kw">setwd</span>(<span class="st">&quot;~/Dropbox/Research/ncs-constituent-eval/analysis&quot;</span>)</code></pre></div>
+<ul>
+<li>Python:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<ul>
+<li>Command line:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
 </section>
 <section id="navigating-relational-paths" class="slide level2">
 <h2>Navigating, relational paths</h2>
@@ -481,9 +526,19 @@ Northwestern University</div></h2>
 </section>
 <section id="one-script-per-task" class="slide level2">
 <h2>One script per task</h2>
+<ul>
+<li>In general, each scipt should do a specific high-level task</li>
+<li>Figuring out where to break up scripts is more of an art than a science, but some rules of thumb</li>
+<li>If you are at a point in your workflow where it would make sense to save something - a dataset, a model object, a few figures, etc,</li>
+</ul>
 </section>
 <section id="mind-the-order" class="slide level2">
 <h2>Mind the order</h2>
+<ul>
+<li>Complex tasks will require multiple scripts</li>
+<li>Use organizing tools like RStudio’s Projects</li>
+<li>Number scripts in order: <code>0_clean_data.R</code>, <code>1_merge_census_data.R</code>, <code>3_fit_multilevel models.R</code></li>
+</ul>
 </section>
 <section id="your-audiences-in-decreasing-order" class="slide level2">
 <h2>Your audiences, in decreasing order</h2>
@@ -498,12 +553,105 @@ Northwestern University</div></h2>
 <ul>
 <li>Messages to all of your audiences</li>
 <li>Say what you’re doing in plain words and why you’re doing it</li>
+<li>People differ a lot in their commenting preferences</li>
+<li>Find what’s comfortable for you, let it evolve</li>
+<li>A good rule of thumb - if it’s not obvious what’s going on from a quick skim of the code, comment it</li>
 </ul>
+</section>
+<section id="introduce-each-new-subsection-of-code-with-a-comment" class="slide level2">
+<h2>Introduce each new subsection of code with a comment</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot partisan estimates against one another</span>
+<span class="co"># voters only</span>
+g =<span class="st"> </span><span class="kw">ggplot</span>(ncs, <span class="kw">aes</span>(voted.pid7.dem)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">color =</span> <span class="st">&#39;blue&#39;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">theme_classic</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&#39;none&#39;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">xlim</span>(<span class="dv">0</span>,<span class="dv">1</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.title=</span><span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">8</span>), <span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">hjust=</span><span class="fl">0.5</span>, <span class="dt">size =</span> <span class="dv">10</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(voted.pid7.rep), <span class="dt">color =</span> <span class="st">&#39;red&#39;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Distribution of electorate partisanship estimates&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Percent of voters in district belonging to each party&quot;</span>)
+
+<span class="kw">ggsave</span>(<span class="st">&#39;~/Dropbox/asymmetry/electoral-accountability/figures/partisan-electorate-estimate-densities.pdf&#39;</span>,
+       g,
+       <span class="dt">width =</span> <span class="dv">4</span>, <span class="dt">height =</span> <span class="dv">4</span>, <span class="dt">dpi =</span> <span class="dv">400</span>) </code></pre></div>
+</section>
+<section id="more-examples-of-comments-form-my-code" class="slide level2">
+<h2>More examples of comments form my code</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># set up poststratification file and poststratify 2014 MRSP models </span>
+
+<span class="co"># level is upper or lower districts, pid.level is 3 or 7 point item </span>
+get.cell.predictions &lt;-<span class="st"> </span><span class="cf">function</span>(individual.model,
+                                 pid.var, <span class="co"># e.g., &#39;pid3.dem&#39;</span>
+                                 pstrat){
+  <span class="co"># district random effects need zeros for missing dists</span>
+  district.ranefs &lt;-<span class="st"> </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>modgeoid
+  missing.districts &lt;-<span class="st"> </span><span class="kw">setdiff</span>(<span class="kw">unique</span>(pstrat<span class="op">$</span>modgeoid), <span class="kw">rownames</span>(district.ranefs))
+  missing.districts.df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">district =</span> missing.districts)
+  <span class="kw">rownames</span>(missing.districts.df) &lt;-<span class="st"> </span>missing.districts.df<span class="op">$</span>district
+  missing.districts.df<span class="op">$</span><span class="st">`</span><span class="dt">(Intercept)</span><span class="st">`</span> &lt;-<span class="st"> </span><span class="dv">0</span>
+  missing.districts.df &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">select</span>(missing.districts.df, <span class="op">-</span>district)
+  district.ranefs &lt;-<span class="st"> </span><span class="kw">rbind.data.frame</span>(district.ranefs, missing.districts.df)
+  
+  <span class="co"># </span><span class="al">NOTE</span><span class="co">: make sure AK and HI is working</span></code></pre></div>
+</section>
+<section id="contd" class="slide level2">
+<h2>cont’d</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">  cell.preds &lt;-<span class="st"> </span><span class="kw">invlogit</span>(
+    <span class="kw">fixef</span>(individual.model)[<span class="st">&quot;(Intercept)&quot;</span>] <span class="op">+</span>
+<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>educ[pstrat<span class="op">$</span>education, ] <span class="op">+</span>
+<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>race[pstrat<span class="op">$</span>race, ] <span class="op">+</span>
+<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>gender[pstrat<span class="op">$</span>gender, ] <span class="op">+</span>
+<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>f.race[pstrat<span class="op">$</span>f.race, ] <span class="op">+</span>
+<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>educ.race[pstrat<span class="op">$</span>educ.race, ] <span class="op">+</span>
+<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>fips[<span class="kw">as.character</span>(pstrat<span class="op">$</span>fips), ] <span class="op">+</span>
+<span class="st">      </span>district.ranefs[pstrat<span class="op">$</span>modgeoid, ] <span class="op">+</span>
+<span class="st">      </span><span class="kw">fixef</span>(individual.model)[<span class="st">&quot;medianhhincome&quot;</span>] <span class="op">*</span><span class="st"> </span>pstrat<span class="op">$</span>medianhhincome <span class="op">+</span>
+<span class="st">      </span><span class="kw">fixef</span>(individual.model)[<span class="st">&quot;obama.2012.twoparty&quot;</span>] <span class="op">*</span><span class="st"> </span>pstrat<span class="op">$</span>obama.<span class="fl">2012.</span>twoparty
+  )
+  
+  <span class="kw">return</span>(cell.preds)
+<span class="er">}</span></code></pre></div>
+</section>
+<section id="more-comments-from-that-r-script" class="slide level2">
+<h2>More comments from that R script</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># divide within proportions grouped by party and district to get dist-party estimates </span>
+
+pstrat.upper =<span class="st"> </span>pstrat <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;U&quot;</span>, modgeoid)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">cbind</span>(upper.cell.predictions) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(<span class="op">-</span>X)
+
+pstrat.lower =<span class="st"> </span>pstrat <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;L&quot;</span>, modgeoid)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">cbind</span>(lower.cell.predictions) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(<span class="op">-</span>X)</code></pre></div>
+</section>
+<section id="more" class="slide level2">
+<h2>More</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># transform so the columns are &quot;the percent of the [PARTY] in the district that falls in each cell </span>
+
+<span class="co"># lower</span>
+make.party.proportions.for.level &lt;-<span class="st"> </span><span class="cf">function</span>(level) {
+  <span class="cf">if</span>(level<span class="op">==</span><span class="st">&quot;upper&quot;</span>) pstrat =<span class="st"> </span>pstrat.upper
+  <span class="cf">if</span>(level<span class="op">==</span><span class="st">&quot;lower&quot;</span>) pstrat =<span class="st"> </span>pstrat.lower
+  
+  party.proportions =<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">matrix</span>(<span class="dt">nrow =</span> <span class="kw">nrow</span>(pstrat), <span class="dt">ncol =</span> <span class="kw">length</span>(party.id.vars)))
+  <span class="kw">names</span>(party.proportions) =<span class="st"> </span>party.id.vars
+  
+  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(party.id.vars)){
+    pid &lt;-<span class="st"> </span>party.id.vars[i]
+    
+    <span class="co"># models is in same order as party.id.vars above</span>
+    pstrat[,pid] &lt;-<span class="st"> </span>pstrat<span class="op">$</span>proportion <span class="op">*</span><span class="st"> </span>pstrat[,pid]  }
+  
+    <span class="kw">return</span>(pstrat)
+}</code></pre></div>
 </section>
 <section id="version-control" class="slide level2">
 <h2>Version control</h2>
 <ul>
-<li>Simplest version – lets you revert to the past</li>
+<li>Simplest definition – lets you revert to the past</li>
 <li>Track changes made by collaborators</li>
 <li>Document your contributions to code</li>
 </ul>
@@ -512,7 +660,8 @@ Northwestern University</div></h2>
 <h2>Version control options</h2>
 <ul>
 <li>Git/github</li>
-<li>Dropbox version control</li>
+<li>Dropbox</li>
+<li>Collaboration is tough - live editing code for Python and R are coming but not common right now. More likely, one collaborator should be in a file at a time</li>
 </ul>
 </section>
 <section id="tidy-data-principles" class="slide level2">
@@ -531,6 +680,16 @@ Northwestern University</div></h2>
 </section>
 <section id="relational-data" class="slide level2">
 <h2>Relational data</h2>
+<ul>
+<li>Some data has structures more complex than simple tables</li>
+<li>For example, Netflix has a database where each user has a table of movies they’ve watched and a separate table for each movie of the users who have watched it</li>
+<li>This is “relational data”</li>
+<li>It’s often, but not always, big</li>
+<li>Requires special tools, usually SQL</li>
+</ul>
+</section>
+<section id="dont-repeat-yourself" class="slide level2">
+<h2>DON’T REPEAT YOURSELF</h2>
 </section>
 <section id="where-to-work-development-environments" class="slide level2">
 <h2>Where to work? Development environments</h2>
