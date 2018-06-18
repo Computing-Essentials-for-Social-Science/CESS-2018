@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CESS 2018</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      position: fixed;
+      width:100%;
+      top:0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+        padding-top:5%;
+        height:auto;
+        width:100%
+        }
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      height: 100%;
+      width: 15%;
+      font-size:1.5em;
+    }
+
+    .text-left {
+        width:70%;
+        font-size:1.25em;
+        padding-right: 4%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      position: fixed;
+      width: 100%;
+      bottom:0;
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" style="z-index: 1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">CESS 2018</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="cess-syllabus.html">Syllabus</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="lectures.html">Lecture Slides</a></li>
+        <li><a href="https://github.com/Computing-Essentials-for-Social-Science/CESS-2018">Github page</a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+        <p></p>
+    </div>
+    <div class="col-sm-8 text-left">
+        <div style="font-size:1.2em;padding-bottom:15%;">
+        <br><br>
+        <h2>Workshop Materials</h2>
+        <br>
+        <h3>Day One</h3>
+            <ul>
+            <li><a href="day_one.html">HTML slides</a></li>
+            <li><a href="day_one.pdf">PDF version</a></li>
+            </ul>
+        <h3>Day Two</h3>
+        <ul>
+        <li><a href="day_two.html">HTML slides</a></li>
+        <li><a href="day_two.pdf">PDF version</a></li>
+        <li><a href="Basics of Computation.ipynb">Jupyter notebook</a></li>
+        </ul>
+
+        <h3>Day Three</h3>
+        <ul>
+        <li><a href="day_three.html">HTML slides</a></li>
+        <li><a href="day_three.pdf">PDF version</a></li>
+        <li><a href="day_three.ipynb">Jupyter notebook<a></li>
+        </ul>
+
+        </div>
+    </div>
+    <div class="col-sm-2 sidenav" style="position:fixed;top:15%;right:2%">
+
+        <p><img src="https://cpb-us-east-1-juc1ugur1qwqqqo4.stackpathdns.com/sites.northwestern.edu/dist/a/1938/files/2017/09/IMG_1752-1976heh-e1508357516868-200x300.jpg" style="width:50%">
+            <br><h5>Chris Skovron, PhD.</h5>
+        </p>
+        <br>
+        <p>
+            <img src="images/atwellpic.png" style="width:50%">
+            <br><h5>Jon Atwell, PhD.</h5>
+        </p>
+        <br><br>
+      <p><a href="https://www.datacamp.com/courses/free-introduction-to-r">Data Camp R</a></p>
+      <p><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Data Camp Python</a></p>
+      <p><a href="https://sites.northwestern.edu/summerworkshops/">RCS workshops</a></p>
+      <br><br>
+
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>The Computing Essentials for Social Scientists training program is an initiative of Northwestern's Data Science Initiative and is supported by the<br>
+  <a href="https://ipr.northwestern.edu">Institute for Policy Research</a>,
+  <a href="https://nico.northwestern.edu">Institute on Complex Systems</a>, and
+  <a href="https://www.it.northwestern.edu/research/index.html"> Research Computing Services</a></p>
+</footer>
+
+</body>
+</html>
