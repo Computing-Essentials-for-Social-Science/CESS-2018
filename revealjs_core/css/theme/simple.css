@@ -18,9 +18,9 @@ body {
   background-color: #fff; }
 
 .reveal {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "News Cycle", sans-serif;
   font-size: 40px;
-  font-weight: 100;
+  font-weight: 200;
   color: #000; }
 
 ::selection {
@@ -49,8 +49,8 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #000;
-  font-family: "Helvetica Neue", Impact, sans-serif;
-  font-weight: 100;
+  font-family: "News Cycle", Impact, sans-serif;
+  font-weight: 200;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: none;
