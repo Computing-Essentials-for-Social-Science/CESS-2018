@@ -25,7 +25,10 @@ output:
 - Python vs R 
 - What you need to know to succeed with data science
 
-## Let's get to know one another 
+<section>
+</section>
+
+## Let's get to know one another
 
 ## Jon Atwell
 - Michigan PhD, 2017 - Sociology
@@ -149,7 +152,7 @@ obliged and took up their role in driving supply for the market. Formalization t
 - You should share what you know and tricks you pick up with peers and with faculty 
 
 ## Python vs R
-<<span class="fragment" data-fragment-index="1">[<img class="plain" width="50%" height="80%" src="war.png">](http://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1523009719/main-qimg-9dcf536c501455f073dfbc4e09798a51_vpijr0.png)</span>
+<span class="fragment" data-fragment-index="1">[<img class="plain" width="50%" height="80%" src="war.png">](http://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1523009719/main-qimg-9dcf536c501455f073dfbc4e09798a51_vpijr0.png)</span>
 
 ## Where do you fit in DS?
 <br><br><span class="fragment" data-fragment-index="1">or, What you need (and don't need) to know to thrive _using_ computational tools</span>
