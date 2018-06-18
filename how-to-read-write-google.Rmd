@@ -14,18 +14,39 @@ output:
     self_contained: false
 ---
           
+
+## Learning to do computational research involves learning to write and read different things than you are used to
+
+
           
 ## You probably hear a lot about "clean" code 
 
 ## Most of that is bullshit and pandering
 - unless you are working in industry in a setting where things need to highly scale 
 
-## In five years, you will look back on your past self's code and be horrified 
+## In a year or five years, you will look back on your past self's code and be horrified 
+
+![Found on @sarahbouchat's twitter][catfaultsies.jpg]
+
+
+
+
+
+
+## Set yourself realistic goals in coding 
+- Acquire data
+- Clean it in (tidy) forms ready for analysis
+- Analyze
+- Visualize and communicate 
+
+## These goals animate today's lesson, on how to teach yourself, and tomorrow's lesson on "getting organized"
+
+
 
 ## Reading and writing documents related to coding
 - You will be reading new kinds of documentation, vignettes, examples, error messages
 - These will seem confusing at first
-- There are strategies, bu tnothing can beat practice 
+- There are strategies, but nothing can beat practice 
 
 ## Your goals in writing code are more modest 
 - Does this do what I need it to do in a reasonably computationally efficient manner? 
@@ -33,12 +54,6 @@ output:
 - Will my collaborators and/or replicators understand it? 
 - Have I written in such a way that will prevent me from making mistakes? 
 We will address each of these goals in order. 
-
-
-
-# How to comment code/being kind to your future self 
-
-
 
 
 
@@ -80,7 +95,7 @@ female # coded 1 if female
 
 ## Similar variables should have similar names
 
-- For example, my candidates' perceptions of things alwas begin with `perc.`
+- For example, my candidates' perceptions of things always begin with `perc.`
 - Next, geography, are they perceiving district, `perc.district`, or state, `perc.state`
 - Sometimes they are perceiving opinion within a party: `perc.district.dem`
 - Then the issue: `perc.district.dem.marriage` means their district-level perception of support for same-sex marriage. `perc.district.guns.banassault` is district-level support for banning assault weapons. There's also `guns.background.check`....
@@ -106,14 +121,15 @@ female # coded 1 if female
 ## Expect to constantly be searching for help 
 
 - There's way too much to remember, we offload that knowledge to the internet and elsewhere
-- 
+- Messing up is the best way to learn when coding
 
 
 
 ## Do due diligence before googling aimlessly
 
-- You may be able to google a solution, but that is sort of the being-given-a-fish way. You want to learn to fish. 
+- You may be able to Google a solution, but that is sort of the being-given-a-fish way. You want to learn to fish. 
 - The best ways to teach yourself are to code a lot and read a lot of examples
+- It's a really slow process
 
 
 ## Steal intelligently
@@ -127,7 +143,9 @@ female # coded 1 if female
 
 
 ## Find vignettes and lessons written by others 
-
+- You'll want to read package documentation, but more didactic examples are helpful too
+- In R world these are called vignettes, you'll also find "tutorials"
+- Many github repositories have vignettes and usage examples attached to them. 
 - [An example of a nice package vignette, for `broom`](https://cran.r-project.org/web/packages/broom/vignettes/broom.html)
 
 ## Build up a library of cheats 
@@ -156,7 +174,7 @@ female # coded 1 if female
 ## Built-in help will
 - Tell you how functions work, to varying degrees of helpfulness 
 - Often provide some examples of how functions work
-- Often still leave you clueless and needing to google around some more 
+- Often still leave you clueless and needing to Google around some more 
 
 ## Figuring out your google query
 
@@ -167,6 +185,7 @@ female # coded 1 if female
 ## Asking for help
 - You will want a "minimal working example"
 - [Here's a good guide for writing one in R from Jared Knowles](https://www.jaredknowles.com/journal/2013/5/27/writing-a-minimal-working-example-mwe-in-r)
+- The most efficient way to ask for help, in exponentially decreasing order: Ask Google, ask people you know, ask strangers online 
 
 
 
