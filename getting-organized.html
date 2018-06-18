@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="getting-organized_files/reveal.js-3.3.0.1/css/reveal.css"/>
+  <link rel="stylesheet" href="revealjs_core/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
 <style type="text/css">
@@ -44,7 +44,7 @@ code > span.at { } /* Attribute */
 code > span.in { color: #008000; } /* Information */
 </style>
 
-<link rel="stylesheet" href="getting-organized_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="revealjs_core/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
 
 
   <!-- some tweaks to reveal css -->
@@ -615,7 +615,8 @@ get.cell.predictions &lt;-<span class="st"> </span><span class="cf">function</sp
 </section>
 <section id="more-comments-from-that-r-script" class="slide level2">
 <h2>More comments from that R script</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># divide within proportions grouped by party and district to get dist-party estimates </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># divide within proportions grouped by party</span>
+<span class="co"># and district to get dist-party estimates </span>
 
 pstrat.upper =<span class="st"> </span>pstrat <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;U&quot;</span>, modgeoid)) <span class="op">%&gt;%</span><span class="st"> </span>
@@ -629,7 +630,8 @@ pstrat.lower =<span class="st"> </span>pstrat <span class="op">%&gt;%</span><spa
 </section>
 <section id="more" class="slide level2">
 <h2>More</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># transform so the columns are &quot;the percent of the [PARTY] in the district that falls in each cell </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># transform so the columns are &quot;the percent </span>
+<span class="co"># of the [PARTY] in the district that falls in each cell </span>
 
 <span class="co"># lower</span>
 make.party.proportions.for.level &lt;-<span class="st"> </span><span class="cf">function</span>(level) {
@@ -647,6 +649,13 @@ make.party.proportions.for.level &lt;-<span class="st"> </span><span class="cf">
   
     <span class="kw">return</span>(pstrat)
 }</code></pre></div>
+</section>
+<section id="commenting-sounds-easy-in-the-abstract" class="slide level2">
+<h2>Commenting sounds easy in the abstract</h2>
+<ul>
+<li>You’ll be cruising along writing code (no, really, eventually you will) and not feel like stopping to write comments</li>
+<li>Things will seem really obvious when you write them despite being not obvious to those who come after, including your future self</li>
+</ul>
 </section>
 <section id="version-control" class="slide level2">
 <h2>Version control</h2>
@@ -698,8 +707,8 @@ make.party.proportions.for.level &lt;-<span class="st"> </span><span class="cf">
     </div>
   </div>
 
-  <script src="getting-organized_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
-  <script src="getting-organized_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+  <script src="revealjs_core/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="revealjs_core/reveal.js-3.3.0.1/js/reveal.js"></script>
 
   <script>
 
