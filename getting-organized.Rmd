@@ -35,7 +35,10 @@ output:
 
 
 ## Set up lists you can iterate over
-- If you're doing the same task oer and over, 
+- If you're doing the same task oer and over, you want to iterate over a list
+- Strategies for doing this depend on task and language
+- for loops
+- apply functions 
 
 
 
@@ -56,11 +59,13 @@ setwd("~/Dropbox/Research/ncs-constituent-eval/analysis")
 ```
 - Python:
 ```{python, eval = FALSE}
-
+import os
+path="~/Dropbox/Research/ncs-constituent-eval/analysis"
+os.chdir(path)
 ```
 - Command line:
 ```{bash, eval = FALSE}
-
+cd "~/Dropbox/Research/ncs-constituent-eval/analysis"
 ```
 
 
@@ -162,6 +167,18 @@ dat <- read.csv("some-file-in-your-working-directory.csv", stringsAsFactors = FA
   - `head()` and `tail()`
   - `tibble::glimpse()`
   - `is.na()` and `sum(is.na())`
+
+
+
+## Set yourself up to do things iteratively
+
+- In one paper, I do the same analysis for many survey items
+- To automate this, I made a helper file called `issues.names.titles.csv`
+
+![](./images/helper-csv.png)
+
+
+
 
 
 

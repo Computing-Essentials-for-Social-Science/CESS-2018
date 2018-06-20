@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="dcterms.date" content="2018-06-18" />
+  <meta name="dcterms.date" content="2018-06-20" />
   <title>Getting Organized to Do Data Science</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -484,7 +484,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <h1 class="title">Getting Organized to Do Data Science</h1>
     <h2 class="author"><div style="white-space: pre-line;">Christopher Skovron &amp; Jon Atwell
 Northwestern University</div></h2>
-    <h3 class="date">June 18, 2018</h3>
+    <h3 class="date">June 20, 2018</h3>
 </section>
 
 <section id="get-organized" class="slide level2">
@@ -508,6 +508,15 @@ Northwestern University</div></h2>
 <li>Typically, this will be on your disk or on some remote/cloud disk you can access from your machine</li>
 </ul>
 </section>
+<section id="set-up-lists-you-can-iterate-over" class="slide level2">
+<h2>Set up lists you can iterate over</h2>
+<ul>
+<li>If you’re doing the same task oer and over, you want to iterate over a list</li>
+<li>Strategies for doing this depend on task and language</li>
+<li>for loops</li>
+<li>apply functions</li>
+</ul>
+</section>
 <section id="understand-your-file-structure" class="slide level2">
 <h2>Understand your file structure</h2>
 </section>
@@ -527,11 +536,13 @@ Northwestern University</div></h2>
 <ul>
 <li>Python:</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> os
+path<span class="op">=</span><span class="st">&quot;~/Dropbox/Research/ncs-constituent-eval/analysis&quot;</span>
+os.chdir(path)</code></pre></div>
 <ul>
 <li>Command line:</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> <span class="st">&quot;~/Dropbox/Research/ncs-constituent-eval/analysis&quot;</span></code></pre></div>
 </section>
 <section id="navigating-relational-paths" class="slide level2">
 <h2>Navigating, relational paths</h2>
@@ -574,115 +585,6 @@ Northwestern University</div></h2>
 <li>Replicators</li>
 </ul>
 </section>
-<section id="commenting" class="slide level2">
-<h2>Commenting</h2>
-<ul>
-<li>Messages to all of your audiences</li>
-<li>Say what you’re doing in plain words and why you’re doing it</li>
-<li>People differ a lot in their commenting preferences</li>
-<li>Find what’s comfortable for you, let it evolve</li>
-<li>A good rule of thumb - if it’s not obvious what’s going on from a quick skim of the code, comment it</li>
-</ul>
-</section>
-<section id="introduce-each-new-subsection-of-code-with-a-comment" class="slide level2">
-<h2>Introduce each new subsection of code with a comment</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot partisan estimates against one another</span>
-<span class="co"># voters only</span>
-g =<span class="st"> </span><span class="kw">ggplot</span>(ncs, <span class="kw">aes</span>(voted.pid7.dem)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">color =</span> <span class="st">&#39;blue&#39;</span>) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">theme_classic</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&#39;none&#39;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">xlim</span>(<span class="dv">0</span>,<span class="dv">1</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.title=</span><span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">8</span>), <span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">hjust=</span><span class="fl">0.5</span>, <span class="dt">size =</span> <span class="dv">10</span>)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(voted.pid7.rep), <span class="dt">color =</span> <span class="st">&#39;red&#39;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Distribution of electorate partisanship estimates&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Percent of voters in district belonging to each party&quot;</span>)
-
-<span class="kw">ggsave</span>(<span class="st">&#39;~/Dropbox/asymmetry/electoral-accountability/figures/partisan-electorate-estimate-densities.pdf&#39;</span>,
-       g,
-       <span class="dt">width =</span> <span class="dv">4</span>, <span class="dt">height =</span> <span class="dv">4</span>, <span class="dt">dpi =</span> <span class="dv">400</span>) </code></pre></div>
-</section>
-<section id="more-examples-of-comments-form-my-code" class="slide level2">
-<h2>More examples of comments form my code</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># set up poststratification file and poststratify 2014 MRSP models </span>
-
-<span class="co"># level is upper or lower districts, pid.level is 3 or 7 point item </span>
-get.cell.predictions &lt;-<span class="st"> </span><span class="cf">function</span>(individual.model,
-                                 pid.var, <span class="co"># e.g., &#39;pid3.dem&#39;</span>
-                                 pstrat){
-  <span class="co"># district random effects need zeros for missing dists</span>
-  district.ranefs &lt;-<span class="st"> </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>modgeoid
-  missing.districts &lt;-<span class="st"> </span><span class="kw">setdiff</span>(<span class="kw">unique</span>(pstrat<span class="op">$</span>modgeoid), <span class="kw">rownames</span>(district.ranefs))
-  missing.districts.df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">district =</span> missing.districts)
-  <span class="kw">rownames</span>(missing.districts.df) &lt;-<span class="st"> </span>missing.districts.df<span class="op">$</span>district
-  missing.districts.df<span class="op">$</span><span class="st">`</span><span class="dt">(Intercept)</span><span class="st">`</span> &lt;-<span class="st"> </span><span class="dv">0</span>
-  missing.districts.df &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">select</span>(missing.districts.df, <span class="op">-</span>district)
-  district.ranefs &lt;-<span class="st"> </span><span class="kw">rbind.data.frame</span>(district.ranefs, missing.districts.df)
-  
-  <span class="co"># </span><span class="al">NOTE</span><span class="co">: make sure AK and HI is working</span></code></pre></div>
-</section>
-<section id="contd" class="slide level2">
-<h2>cont’d</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">  cell.preds &lt;-<span class="st"> </span><span class="kw">invlogit</span>(
-    <span class="kw">fixef</span>(individual.model)[<span class="st">&quot;(Intercept)&quot;</span>] <span class="op">+</span>
-<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>educ[pstrat<span class="op">$</span>education, ] <span class="op">+</span>
-<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>race[pstrat<span class="op">$</span>race, ] <span class="op">+</span>
-<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>gender[pstrat<span class="op">$</span>gender, ] <span class="op">+</span>
-<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>f.race[pstrat<span class="op">$</span>f.race, ] <span class="op">+</span>
-<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>educ.race[pstrat<span class="op">$</span>educ.race, ] <span class="op">+</span>
-<span class="st">      </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>fips[<span class="kw">as.character</span>(pstrat<span class="op">$</span>fips), ] <span class="op">+</span>
-<span class="st">      </span>district.ranefs[pstrat<span class="op">$</span>modgeoid, ] <span class="op">+</span>
-<span class="st">      </span><span class="kw">fixef</span>(individual.model)[<span class="st">&quot;medianhhincome&quot;</span>] <span class="op">*</span><span class="st"> </span>pstrat<span class="op">$</span>medianhhincome <span class="op">+</span>
-<span class="st">      </span><span class="kw">fixef</span>(individual.model)[<span class="st">&quot;obama.2012.twoparty&quot;</span>] <span class="op">*</span><span class="st"> </span>pstrat<span class="op">$</span>obama.<span class="fl">2012.</span>twoparty
-  )
-  
-  <span class="kw">return</span>(cell.preds)
-<span class="er">}</span></code></pre></div>
-</section>
-<section id="more-comments-from-that-r-script" class="slide level2">
-<h2>More comments from that R script</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># divide within proportions grouped by party</span>
-<span class="co"># and district to get dist-party estimates </span>
-
-pstrat.upper =<span class="st"> </span>pstrat <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;U&quot;</span>, modgeoid)) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">cbind</span>(upper.cell.predictions) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(<span class="op">-</span>X)
-
-pstrat.lower =<span class="st"> </span>pstrat <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;L&quot;</span>, modgeoid)) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">cbind</span>(lower.cell.predictions) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(<span class="op">-</span>X)</code></pre></div>
-</section>
-<section id="more" class="slide level2">
-<h2>More</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># transform so the columns are &quot;the percent </span>
-<span class="co"># of the [PARTY] in the district that falls in each cell </span>
-
-<span class="co"># lower</span>
-make.party.proportions.for.level &lt;-<span class="st"> </span><span class="cf">function</span>(level) {
-  <span class="cf">if</span>(level<span class="op">==</span><span class="st">&quot;upper&quot;</span>) pstrat =<span class="st"> </span>pstrat.upper
-  <span class="cf">if</span>(level<span class="op">==</span><span class="st">&quot;lower&quot;</span>) pstrat =<span class="st"> </span>pstrat.lower
-  
-  party.proportions =<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">matrix</span>(<span class="dt">nrow =</span> <span class="kw">nrow</span>(pstrat), <span class="dt">ncol =</span> <span class="kw">length</span>(party.id.vars)))
-  <span class="kw">names</span>(party.proportions) =<span class="st"> </span>party.id.vars
-  
-  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(party.id.vars)){
-    pid &lt;-<span class="st"> </span>party.id.vars[i]
-    
-    <span class="co"># models is in same order as party.id.vars above</span>
-    pstrat[,pid] &lt;-<span class="st"> </span>pstrat<span class="op">$</span>proportion <span class="op">*</span><span class="st"> </span>pstrat[,pid]  }
-  
-    <span class="kw">return</span>(pstrat)
-}</code></pre></div>
-</section>
-<section id="commenting-sounds-easy-in-the-abstract" class="slide level2">
-<h2>Commenting sounds easy in the abstract</h2>
-<ul>
-<li>You’ll be cruising along writing code (no, really, eventually you will) and not feel like stopping to write comments</li>
-<li>Things will seem really obvious when you write them despite being not obvious to those who come after, including your future self</li>
-</ul>
-</section>
 <section id="version-control" class="slide level2">
 <h2>Version control</h2>
 <ul>
@@ -705,6 +607,8 @@ make.party.proportions.for.level &lt;-<span class="st"> </span><span class="cf">
 <li>Every data task will be different, but tidy data principles will help you keep organized</li>
 <li>Much of your workflow will be getting data inputs into a tidy format</li>
 <li>From the beginning, lay out what you need your dataset to look like to do the analyses you want, then work backward from there</li>
+<li><a href="https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html">Hadley’s vignette on tidy data principles</a></li>
+<li><a href="http://r4ds.had.co.nz/tidy-data.html">Chapter of R for Data Science on tidy data</a></li>
 </ul>
 </section>
 <section id="long-data" class="slide level2">
@@ -723,9 +627,42 @@ make.party.proportions.for.level &lt;-<span class="st"> </span><span class="cf">
 <li>Requires special tools, usually SQL</li>
 </ul>
 </section>
+<section id="checking-up-on-your-data-cleaning" class="slide level2">
+<h2>Checking up on your data cleaning</h2>
+<ul>
+<li>glance at your data:</li>
+<li><code>View()</code> (but be careful!)</li>
+<li><code>summary()</code></li>
+<li><code>head()</code> and <code>tail()</code></li>
+<li><code>tibble::glimpse()</code></li>
+<li><code>is.na()</code> and <code>sum(is.na())</code></li>
+</ul>
+</section>
+<section id="set-yourself-up-to-do-things-iteratively" class="slide level2">
+<h2>Set yourself up to do things iteratively</h2>
+<ul>
+<li>In one paper, I do the same analysis for many survey items</li>
+<li>To automate this, I made a helper file called <code>issues.names.titles.csv</code></li>
+</ul>
+<p><img src="images/helper-csv.png" /></p>
+</section>
 <section id="where-to-work-development-environments" class="slide level2">
 <h2>Where to work? Development environments</h2>
+<ul>
+<li>Let your software do some of the work for you</li>
+<li>RStudio projects</li>
+<li>RStudio gets new features every day that help you stay organized</li>
+<li>RMarkdown</li>
+</ul>
 <p>What folders should you have</p>
+</section>
+<section id="get-organized-to-learn-in-the-future" class="slide level2">
+<h2>Get organized to learn in the future</h2>
+<ul>
+<li>Follow #rstats on twitter</li>
+<li><a href="https://twitter.com/cskovron/lists/rstats">I made a twitter list of good R follows here</a></li>
+<li>Star your favorite packages on github and follow developers</li>
+</ul>
 </section>
     </div>
   </div>
