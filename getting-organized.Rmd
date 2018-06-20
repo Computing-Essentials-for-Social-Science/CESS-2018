@@ -1,7 +1,7 @@
 ---
 title: "Getting Organized to Do Data Science"
 author: |
-        | Christopher Skovron
+        | Christopher Skovron \& Jon Atwell
         | Northwestern University 
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: 
@@ -12,12 +12,26 @@ output:
     transition: none
     #css: reveal.css
     self_contained: false
-    lib_dir: revealjs_core
+    lib_dir: "."
 ---
           
           
 ## Get organized
 
+
+
+## Automate everything that can be automated
+- Saves yourself time
+- Prevents mistakes
+- Sometimes comes at the cost of more time up front and code readability
+
+
+## DON'T REPEAT YOURSELF
+
+
+## Don't copy and paste
+- Call things from where they are stored
+- Typically, this will be on your disk or on some remote/cloud disk you can access from your machine
 
 
 ## Understand your file structure
@@ -49,6 +63,15 @@ setwd("~/Dropbox/Research/ncs-constituent-eval/analysis")
 
 
 ## Navigating, relational paths
+- After you set your working directory, you'll want to use it to navigate around
+- Typically in your program, you can refer to anything in the working directory without prefacing it with anything 
+```{r, eval = FALSE}
+
+dat <- read.csv("some-file-in-your-working-directory.csv", stringsAsFactors = FALSE)
+
+```
+
+## Navigating, relational paths
 
 
 ## Good organizational principles
@@ -75,129 +98,6 @@ setwd("~/Dropbox/Research/ncs-constituent-eval/analysis")
 - Your future self
 - Your collaborators
 - Replicators 
-
-
-## Commenting
-
-- Messages to all of your audiences 
-- Say what you're doing in plain words and why you're doing it
-- People differ a lot in their commenting preferences
-- Find what's comfortable for you, let it evolve
-- A good rule of thumb - if it's not obvious what's going on from a quick skim of the code, comment it 
-
-## Introduce each new subsection of code with a comment
-
-```{r, eval = FALSE}
-# plot partisan estimates against one another
-# voters only
-g = ggplot(ncs, aes(voted.pid7.dem)) +
-  geom_density(color = 'blue') + 
-  theme_classic() +
-  theme(legend.position='none') +
-  xlim(0,1) +
-  theme(axis.title=element_text(size=8), plot.title = element_text(hjust=0.5, size = 10)) +
-  geom_density(aes(voted.pid7.rep), color = 'red') +
-  ggtitle("Distribution of electorate partisanship estimates") +
-  xlab("Percent of voters in district belonging to each party")
-
-ggsave('~/Dropbox/asymmetry/electoral-accountability/figures/partisan-electorate-estimate-densities.pdf',
-       g,
-       width = 4, height = 4, dpi = 400) 
-```
-
-## More examples of comments form my code
-
-```{r, eval = FALSE}
-# set up poststratification file and poststratify 2014 MRSP models 
-
-# level is upper or lower districts, pid.level is 3 or 7 point item 
-get.cell.predictions <- function(individual.model,
-                                 pid.var, # e.g., 'pid3.dem'
-                                 pstrat){
-  # district random effects need zeros for missing dists
-  district.ranefs <- ranef(individual.model)$modgeoid
-  missing.districts <- setdiff(unique(pstrat$modgeoid), rownames(district.ranefs))
-  missing.districts.df <- data.frame(district = missing.districts)
-  rownames(missing.districts.df) <- missing.districts.df$district
-  missing.districts.df$`(Intercept)` <- 0
-  missing.districts.df <- dplyr::select(missing.districts.df, -district)
-  district.ranefs <- rbind.data.frame(district.ranefs, missing.districts.df)
-  
-  # NOTE: make sure AK and HI is working
-  
-```
-
-## cont'd
-```{r, eval = FALSE}
-
-  cell.preds <- invlogit(
-    fixef(individual.model)["(Intercept)"] +
-      ranef(individual.model)$educ[pstrat$education, ] +
-      ranef(individual.model)$race[pstrat$race, ] +
-      ranef(individual.model)$gender[pstrat$gender, ] +
-      ranef(individual.model)$f.race[pstrat$f.race, ] +
-      ranef(individual.model)$educ.race[pstrat$educ.race, ] +
-      ranef(individual.model)$fips[as.character(pstrat$fips), ] +
-      district.ranefs[pstrat$modgeoid, ] +
-      fixef(individual.model)["medianhhincome"] * pstrat$medianhhincome +
-      fixef(individual.model)["obama.2012.twoparty"] * pstrat$obama.2012.twoparty
-  )
-  
-  return(cell.preds)
-}
-
-```
-
-## More comments from that R script
-
-```{r, eval = FALSE}
-
-# divide within proportions grouped by party
-# and district to get dist-party estimates 
-
-pstrat.upper = pstrat %>% 
-  dplyr::filter(grepl("U", modgeoid)) %>% 
-  cbind(upper.cell.predictions) %>% 
-  dplyr::select(-X)
-
-pstrat.lower = pstrat %>% 
-  dplyr::filter(grepl("L", modgeoid)) %>% 
-  cbind(lower.cell.predictions) %>% 
-  dplyr::select(-X)
-```
-
-
-## More
-
-```{r, eval = FALSE}
-
-# transform so the columns are "the percent 
-# of the [PARTY] in the district that falls in each cell 
-
-# lower
-make.party.proportions.for.level <- function(level) {
-  if(level=="upper") pstrat = pstrat.upper
-  if(level=="lower") pstrat = pstrat.lower
-  
-  party.proportions = data.frame(matrix(nrow = nrow(pstrat), ncol = length(party.id.vars)))
-  names(party.proportions) = party.id.vars
-  
-  for(i in 1:length(party.id.vars)){
-    pid <- party.id.vars[i]
-    
-    # models is in same order as party.id.vars above
-    pstrat[,pid] <- pstrat$proportion * pstrat[,pid]  }
-  
-    return(pstrat)
-}
-
-```
-
-
-## Commenting sounds easy in the abstract
-- You'll be cruising along writing code (no, really, eventually you will) and not feel like stopping to write comments
-- Things will seem really obvious when you write them despite being not obvious to those who come after, including your future self 
-
 
 
 
@@ -238,11 +138,6 @@ make.party.proportions.for.level <- function(level) {
 - Requires special tools, usually SQL 
 
 
-
-
-
-
-## DON'T REPEAT YOURSELF
 
 
 
