@@ -3,48 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="dcterms.date" content="2018-06-18" />
+  <meta name="dcterms.date" content="2018-06-20" />
   <title>How to Read, Write, and Google for Success in Coding</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="revealjs_core/reveal.js-3.3.0.1/css/reveal.css"/>
+  <link rel="stylesheet" href="reveal.js-3.3.0.1/css/reveal.css"/>
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #0000ff; } /* Keyword */
-code > span.ch { color: #008080; } /* Char */
-code > span.st { color: #008080; } /* String */
-code > span.co { color: #008000; } /* Comment */
-code > span.ot { color: #ff4000; } /* Other */
-code > span.al { color: #ff0000; } /* Alert */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #008000; font-weight: bold; } /* Warning */
-code > span.cn { } /* Constant */
-code > span.sc { color: #008080; } /* SpecialChar */
-code > span.vs { color: #008080; } /* VerbatimString */
-code > span.ss { color: #008080; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { } /* Variable */
-code > span.cf { color: #0000ff; } /* ControlFlow */
-code > span.op { } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #ff4000; } /* Preprocessor */
-code > span.do { color: #008000; } /* Documentation */
-code > span.an { color: #008000; } /* Annotation */
-code > span.cv { color: #008000; } /* CommentVar */
-code > span.at { } /* Attribute */
-code > span.in { color: #008000; } /* Information */
-</style>
 
-<link rel="stylesheet" href="revealjs_core/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
 
 
   <!-- some tweaks to reveal css -->
@@ -482,26 +450,29 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 <section>
     <h1 class="title">How to Read, Write, and Google for Success in Coding</h1>
-    <h2 class="author"><div style="white-space: pre-line;">Christopher Skovron
+    <h2 class="author"><div style="white-space: pre-line;">Christopher Skovron and Jon Atwell
 Northwestern University</div></h2>
-    <h3 class="date">June 18, 2018</h3>
+    <h3 class="date">June 20, 2018</h3>
 </section>
 
 <section id="learning-to-do-computational-research-involves-learning-to-write-and-read-different-things-than-you-are-used-to" class="slide level2">
 <h2>Learning to do computational research involves learning to write and read different things than you are used to</h2>
+<section>
+</section>
 </section>
 <section id="you-probably-hear-a-lot-about-clean-code" class="slide level2">
 <h2>You probably hear a lot about “clean” code</h2>
 </section>
-<section id="most-of-that-is-bullshit-and-pandering" class="slide level2">
-<h2>Most of that is bullshit and pandering</h2>
+<section id="most-of-that-is-bullshit-and-preening" class="slide level2">
+<h2>Most of that is bullshit and preening</h2>
 <ul>
 <li>unless you are working in industry in a setting where things need to highly scale</li>
+<li>remember the point from Day One about human scale</li>
 </ul>
 </section>
 <section id="in-a-year-or-five-years-you-will-look-back-on-your-past-selfs-code-and-be-horrified" class="slide level2">
 <h2>In a year or five years, you will look back on your past self’s code and be horrified</h2>
-<p>[Found on <span class="citation" data-cites="sarahbouchat">@sarahbouchat</span>’s twitter][catfaultsies.jpg]</p>
+<p><img src="images/sarahb_faultsiez.png" alt="From @sarahbouchat’s twitter" /></p>
 </section>
 <section id="set-yourself-realistic-goals-in-coding" class="slide level2">
 <h2>Set yourself realistic goals in coding</h2>
@@ -514,6 +485,9 @@ Northwestern University</div></h2>
 </section>
 <section id="these-goals-animate-todays-lesson-on-how-to-teach-yourself-and-tomorrows-lesson-on-getting-organized" class="slide level2">
 <h2>These goals animate today’s lesson, on how to teach yourself, and tomorrow’s lesson on “getting organized”</h2>
+<ul>
+<li>These goals require lots of practice. Halfway between muscle memory and an art form</li>
+</ul>
 </section>
 <section id="reading-and-writing-documents-related-to-coding" class="slide level2">
 <h2>Reading and writing documents related to coding</h2>
@@ -532,7 +506,23 @@ Northwestern University</div></h2>
 <li>Have I written in such a way that will prevent me from making mistakes? We will address each of these goals in order.</li>
 </ul>
 </section>
-<section><section id="some-resources-to-orient-you-to-best-practicies-in-writing-code" class="titleslide slide level1"><h1>Some resources to orient you to best practicies in writing code</h1></section><section id="pick-good-names" class="slide level2">
+<section id="code-should-be" class="slide level2">
+<h2>Code should be</h2>
+<ul>
+<li>Easily understood by humans</li>
+<li>Relatively consistent</li>
+<li>Able to be adapted to new situations</li>
+</ul>
+</section>
+<section id="some-resources-to-orient-you-to-best-practicies-in-writing-code" class="slide level2">
+<h2>Some resources to orient you to best practicies in writing code</h2>
+<ul>
+<li>Read points 1-8 of <a href="https://www.r-bloggers.com/r-best-practices-r-you-writing-the-r-way/">this guide</a> (specific to R but applies to other languages)</li>
+<li><a href="http://adv-r.had.co.nz/Style.html">Hadley Wickham’s R style guide</a></li>
+<li><a href="https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R/">Another good resource on R best practices.</a></li>
+</ul>
+</section>
+<section id="pick-good-names" class="slide level2">
 <h2>Pick good names</h2>
 <ul>
 <li>You might be tempted to use abbreviations or non-words to save yourself from typing the same characters over and over</li>
@@ -540,17 +530,22 @@ Northwestern University</div></h2>
 <li>Choose names that are legible, clear, and precise</li>
 <li>Name functions what they do, name variables what they are</li>
 </ul>
-</section><section id="good-and-bad-names" class="slide level2">
+</section>
+<section id="good-and-bad-names" class="slide level2">
 <h2>Good and bad names</h2>
+<p>In R, dots are common, underscores are ok:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## a few bad variable names from my past work
 incspendtran
+V101 
 gender <span class="co"># if coded as one or zero, as a factor I&#39;d accept this </span>
 
 
 ## better names
 increase.spending.transportation
+respodent.id
 female <span class="co"># coded 1 if female</span></code></pre></div>
-</section><section id="similar-variables-should-have-similar-names" class="slide level2">
+</section>
+<section id="similar-variables-should-have-similar-names" class="slide level2">
 <h2>Similar variables should have similar names</h2>
 <ul>
 <li>For example, my candidates’ perceptions of things always begin with <code>perc.</code></li>
@@ -559,94 +554,280 @@ female <span class="co"># coded 1 if female</span></code></pre></div>
 <li>Then the issue: <code>perc.district.dem.marriage</code> means their district-level perception of support for same-sex marriage. <code>perc.district.guns.banassault</code> is district-level support for banning assault weapons. There’s also <code>guns.background.check</code>….</li>
 <li>This lets me use things like <code>grep()</code> to grab variables that are similar</li>
 </ul>
-</section><section id="principles-of-good-commenting" class="slide level2">
+</section>
+<section id="commenting" class="slide level2">
+<h2>Commenting</h2>
+<ul>
+<li>Messages to all of your audiences – most importantly to yourself</li>
+<li>Say what you’re doing in plain words and why you’re doing it</li>
+<li>People differ a lot in their commenting preferences</li>
+<li>Find what’s comfortable for you, let it evolve</li>
+<li>A good rule of thumb - if it’s not obvious what’s going on from a quick skim of the code, comment it</li>
+</ul>
+</section>
+<section id="principles-of-good-commenting" class="slide level2">
 <h2>Principles of good commenting</h2>
 <ul>
 <li>Don’t comment things that are painfully obvious</li>
 <li>But most things won’t be painfully obvious</li>
 <li>Comment to introduce each new section of code or each major task</li>
-<li>If you write a new function</li>
+<li>If you write a new function, leave a comment explaining what it does</li>
 </ul>
-</section></section>
-<section><section id="how-to-find-help" class="titleslide slide level1"><h1>How to find help</h1></section><section id="expect-to-constantly-be-searching-for-help" class="slide level2">
+</section>
+<section id="introduce-each-new-subsection-of-code-with-a-comment" class="slide level2">
+<h2>Introduce each new subsection of code with a comment</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot partisan estimates against one another</span>
+<span class="co"># voters only</span>
+g =<span class="st"> </span><span class="kw">ggplot</span>(ncs, <span class="kw">aes</span>(voted.pid7.dem)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">color =</span> <span class="st">&#39;blue&#39;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">theme_classic</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&#39;none&#39;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">xlim</span>(<span class="dv">0</span>,<span class="dv">1</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.title=</span><span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">8</span>), <span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">hjust=</span><span class="fl">0.5</span>, <span class="dt">size =</span> <span class="dv">10</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(voted.pid7.rep), <span class="dt">color =</span> <span class="st">&#39;red&#39;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Distribution of electorate partisanship estimates&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Percent of voters in district belonging to each party&quot;</span>)</code></pre></div>
+</section>
+<section id="more-examples-of-comments-form-my-code" class="slide level2">
+<h2>More examples of comments form my code</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># set up poststratification file and poststratify 2014 MRSP models </span>
+
+<span class="co"># level is upper or lower districts, pid.level is 3 or 7 point item </span>
+get.cell.predictions &lt;-<span class="st"> </span><span class="cf">function</span>(individual.model,
+                                 pid.var, <span class="co"># e.g., &#39;pid3.dem&#39;</span>
+                                 pstrat){
+  <span class="co"># district random effects need zeros for missing dists</span>
+  district.ranefs &lt;-<span class="st"> </span><span class="kw">ranef</span>(individual.model)<span class="op">$</span>modgeoid
+  missing.districts &lt;-<span class="st"> </span><span class="kw">setdiff</span>(<span class="kw">unique</span>(pstrat<span class="op">$</span>modgeoid), <span class="kw">rownames</span>(district.ranefs))
+  missing.districts.df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">district =</span> missing.districts)
+  <span class="kw">rownames</span>(missing.districts.df) &lt;-<span class="st"> </span>missing.districts.df<span class="op">$</span>district
+  missing.districts.df<span class="op">$</span><span class="st">`</span><span class="dt">(Intercept)</span><span class="st">`</span> &lt;-<span class="st"> </span><span class="dv">0</span>
+  missing.districts.df &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">select</span>(missing.districts.df, <span class="op">-</span>district)
+  district.ranefs &lt;-<span class="st"> </span><span class="kw">rbind.data.frame</span>(district.ranefs, missing.districts.df)
+  
+  <span class="co"># </span><span class="al">NOTE</span><span class="co">: make sure AK and HI is working</span></code></pre></div>
+</section>
+<section id="more-comments-from-that-r-script" class="slide level2">
+<h2>More comments from that R script</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># divide within proportions grouped by party</span>
+<span class="co"># and district to get dist-party estimates </span>
+
+pstrat.upper =<span class="st"> </span>pstrat <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;U&quot;</span>, modgeoid)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">cbind</span>(upper.cell.predictions) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(<span class="op">-</span>X)
+
+pstrat.lower =<span class="st"> </span>pstrat <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;L&quot;</span>, modgeoid)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">cbind</span>(lower.cell.predictions) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(<span class="op">-</span>X)</code></pre></div>
+</section>
+<section id="more" class="slide level2">
+<h2>More</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># transform so the columns are &quot;the percent </span>
+<span class="co"># of the [PARTY] in the district that falls in each cell </span>
+
+<span class="co"># lower</span>
+make.party.proportions.for.level &lt;-<span class="st"> </span><span class="cf">function</span>(level) {
+  <span class="cf">if</span>(level<span class="op">==</span><span class="st">&quot;upper&quot;</span>) pstrat =<span class="st"> </span>pstrat.upper
+  <span class="cf">if</span>(level<span class="op">==</span><span class="st">&quot;lower&quot;</span>) pstrat =<span class="st"> </span>pstrat.lower
+  
+  party.proportions =<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">matrix</span>(<span class="dt">nrow =</span> <span class="kw">nrow</span>(pstrat), <span class="dt">ncol =</span> <span class="kw">length</span>(party.id.vars)))
+  <span class="kw">names</span>(party.proportions) =<span class="st"> </span>party.id.vars
+  
+  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(party.id.vars)){
+    pid &lt;-<span class="st"> </span>party.id.vars[i]
+    
+    <span class="co"># models is in same order as party.id.vars above</span>
+    pstrat[,pid] &lt;-<span class="st"> </span>pstrat<span class="op">$</span>proportion <span class="op">*</span><span class="st"> </span>pstrat[,pid]  }
+  
+    <span class="kw">return</span>(pstrat)
+}</code></pre></div>
+</section>
+<section id="commenting-sounds-easy-in-the-abstract" class="slide level2">
+<h2>Commenting sounds easy in the abstract</h2>
+<ul>
+<li>You’ll be cruising along writing code (no, really, eventually you will) and not feel like stopping to write comments</li>
+<li>Things will seem really obvious when you write them despite being not obvious to those who come after, including your future self</li>
+<li>Consistently remind yourself to leave comments</li>
+</ul>
+</section>
+<section id="how-to-find-help" class="slide level2">
+<h2>How to find help</h2>
+<ul>
+<li>Three problems:
+<ul>
+<li>You don’t know where to start</li>
+<li>You write code and it gives the wrong output</li>
+<li>You write code and it throws an error</li>
+</ul></li>
+</ul>
+</section>
+<section id="error-messages" class="slide level2">
+<h2>Error messages</h2>
+<ul>
+<li>Can be helpful or inscrutable</li>
+<li>Often googling them will get you right to the solution or an explanation</li>
+<li><a href="http://www.dummies.com/programming/r/how-to-read-errors-and-warnings-in-r/">A guide on understanding the structure of R error messages</a></li>
+</ul>
+</section>
+<section id="expect-to-constantly-be-searching-for-help" class="slide level2">
 <h2>Expect to constantly be searching for help</h2>
 <ul>
 <li>There’s way too much to remember, we offload that knowledge to the internet and elsewhere</li>
 <li>Messing up is the best way to learn when coding</li>
+<li>Get comfortable with spending a lot of time googling</li>
 </ul>
-</section><section id="do-due-diligence-before-googling-aimlessly" class="slide level2">
+</section>
+<section id="do-due-diligence-before-googling-aimlessly" class="slide level2">
 <h2>Do due diligence before googling aimlessly</h2>
 <ul>
 <li>You may be able to Google a solution, but that is sort of the being-given-a-fish way. You want to learn to fish.</li>
 <li>The best ways to teach yourself are to code a lot and read a lot of examples</li>
 <li>It’s a really slow process</li>
 </ul>
-</section><section id="steal-intelligently" class="slide level2">
+</section>
+<section id="steal-intelligently" class="slide level2">
 <h2>Steal intelligently</h2>
 <ul>
 <li>Figure out who’s doing similar tasks to you and look for tutorials online</li>
 <li>Steal people’s replication code (But be critical of it!)</li>
 </ul>
-</section><section id="how-to-read-documentation" class="slide level2">
+</section>
+<section id="how-to-read-documentation" class="slide level2">
 <h2>How to read documentation</h2>
 <ul>
 <li>Most documentation will show you a function and various <em>parameters</em></li>
-<li>It’s important to understand different classes of data structures and variable classes</li>
+<li>It’s important to understand different classes of data structures and variable classes in order to effectively use documentation</li>
+<li>In R, you’ll want to learn the differences between</li>
 </ul>
-</section><section id="find-vignettes-and-lessons-written-by-others" class="slide level2">
+</section>
+<section id="find-vignettes-and-lessons-written-by-others" class="slide level2">
 <h2>Find vignettes and lessons written by others</h2>
 <ul>
 <li>You’ll want to read package documentation, but more didactic examples are helpful too</li>
 <li>In R world these are called vignettes, you’ll also find “tutorials”</li>
 <li>Many github repositories have vignettes and usage examples attached to them.</li>
 <li><a href="https://cran.r-project.org/web/packages/broom/vignettes/broom.html">An example of a nice package vignette, for <code>broom</code></a></li>
+<li><a href="https://cran.r-project.org/web/packages/dotwhisker/vignettes/dotwhisker-vignette.html">Another nice package vignette, for <code>dotwhisker</code></a></li>
 </ul>
-</section><section id="build-up-a-library-of-cheats" class="slide level2">
+</section>
+<section id="build-up-a-library-of-cheats" class="slide level2">
 <h2>Build up a library of cheats</h2>
 <ul>
 <li>Bookmark useful help pages</li>
 <li>Make yourself a notebook of examples of code. Have a dropbox folder where you save snippets that do tasks you frequently do.</li>
 <li>I have things like group-level proportions that I frequently do for summary statistics</li>
+<li>Also have my favorite ggplot settings, etc</li>
 <li>Pillage old code for new projects (But be careful! You or your software have probably improved, so writing it anew could be a good learning experience and/or improve efficiency)</li>
 </ul>
-</section><section id="someone-else-has-had-your-problem-before" class="slide level2">
+</section>
+<section id="someone-else-has-had-your-problem-before" class="slide level2">
 <h2>Someone else has had your problem before</h2>
 <ul>
 <li>You will almost never need to post your own question to a mailing list or to StackOverflow.</li>
 <li>Someone has had a similar problem before, you just need to know how to find it</li>
 <li>People might have similar but slightly different problems that you can</li>
 </ul>
-</section><section id="use-built-in-help" class="slide level2">
+</section>
+<section id="figuring-out-your-google-query" class="slide level2">
+<h2>Figuring out your google query</h2>
+<ul>
+<li>Most of the time, you’re going to want to end up on StackOverflow. Often it’s good just to search within SO</li>
+<li>Look for tutorials if you find yourself frequently using a package: If you find yourself working with lots of strings, set aside an afternoon to look at everything written on <code>stringr</code></li>
+</ul>
+</section>
+<section id="effectively-searching-stackoverflow" class="slide level2">
+<h2>Effectively searching StackOverflow</h2>
+<ul>
+<li>I’ve found the best queries are action verb type things:
+<ul>
+<li>Merge two data frames on multiple variables R</li>
+<li>Rename columns with similar names R</li>
+</ul></li>
+</ul>
+</section>
+<section id="googling-tips" class="slide level2">
+<h2>Googling tips</h2>
+<ul>
+<li>Include your language!</li>
+<li>StackOverflow will know the letter R means the language. In some google queries you might want to</li>
+</ul>
+</section>
+<section id="what-youll-find-on-stackoverflow" class="slide level2">
+<h2>What you’ll find on StackOverflow</h2>
+<p><img src="images/stackoverflow-examples/so-1.png" /></p>
+</section>
+<section id="what-youll-find-on-stackoverflow-1" class="slide level2">
+<h2>What you’ll find on StackOverflow</h2>
+<p><img src="images/stackoverflow-examples/so-2.png" /></p>
+</section>
+<section id="what-youll-find-on-stackoverflow-2" class="slide level2">
+<h2>What you’ll find on StackOverflow</h2>
+<p><img src="images/stackoverflow-examples/so-3.png" /></p>
+</section>
+<section id="what-youll-find-on-stackoverflow-3" class="slide level2">
+<h2>What you’ll find on StackOverflow</h2>
+<p><img src="images/stackoverflow-examples/so-4.png" /></p>
+</section>
+<section id="what-youll-find-on-stackoverflow-4" class="slide level2">
+<h2>What you’ll find on StackOverflow</h2>
+<p><img src="images/stackoverflow-examples/so-5.png" /></p>
+</section>
+<section id="use-built-in-help" class="slide level2">
 <h2>Use built-in help</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?lm
 ?read.csv
 ?dplyr<span class="op">::</span>rename</code></pre></div>
-</section><section id="built-in-help-will" class="slide level2">
+</section>
+<section id="built-in-help-will" class="slide level2">
 <h2>Built-in help will</h2>
 <ul>
 <li>Tell you how functions work, to varying degrees of helpfulness</li>
 <li>Often provide some examples of how functions work</li>
 <li>Often still leave you clueless and needing to Google around some more</li>
 </ul>
-</section><section id="figuring-out-your-google-query" class="slide level2">
-<h2>Figuring out your google query</h2>
-<ul>
-<li>Most of the time, you’re going to want to end up on StackOverflow. Often it’s good just to search within SO</li>
-<li>As a rule of thumb, some sort of action-verb</li>
-</ul>
-</section><section id="asking-for-help" class="slide level2">
+</section>
+<section id="not-so-useful-help" class="slide level2">
+<h2>Not-so-useful help</h2>
+<p><img src="images/builtin-help/grep-1.png" alt="The help file for grep is not very useful for novices" /></p>
+</section>
+<section id="not-so-useful-help-1" class="slide level2">
+<h2>Not-so-useful help</h2>
+<p><img src="images/builtin-help/grep-2.png" alt="The help file for grep is not very useful for novices" /></p>
+</section>
+<section id="some-builtin-help-is-more-useful" class="slide level2">
+<h2>Some builtin help is more useful</h2>
+<p><img src="images/builtin-help/amce-1.png" alt="The amce function does one thing and is well-documented." /></p>
+</section>
+<section id="some-builtin-help-is-more-useful-1" class="slide level2">
+<h2>Some builtin help is more useful</h2>
+<p><img src="images/builtin-help/amce-2.png" alt="The amce function does one thing and is well-documented." /></p>
+</section>
+<section id="some-builtin-help-is-more-useful-2" class="slide level2">
+<h2>Some builtin help is more useful</h2>
+<p><img src="images/builtin-help/amce-3.png" alt="The amce function does one thing and is well-documented." /></p>
+</section>
+<section id="some-builtin-help-is-more-useful-3" class="slide level2">
+<h2>Some builtin help is more useful</h2>
+<p><img src="images/builtin-help/amce-4.png" alt="The amce function does one thing and is well-documented." /></p>
+</section>
+<section id="asking-for-help" class="slide level2">
 <h2>Asking for help</h2>
 <ul>
 <li>You will want a “minimal working example”</li>
 <li><a href="https://www.jaredknowles.com/journal/2013/5/27/writing-a-minimal-working-example-mwe-in-r">Here’s a good guide for writing one in R from Jared Knowles</a></li>
 <li>The most efficient way to ask for help, in exponentially decreasing order: Ask Google, ask people you know, ask strangers online</li>
 </ul>
-</section></section>
+</section>
+<section id="it-gets-better" class="slide level2">
+<h2>IT GETS BETTER</h2>
+</section>
     </div>
   </div>
 
-  <script src="revealjs_core/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
-  <script src="revealjs_core/reveal.js-3.3.0.1/js/reveal.js"></script>
+  <script src="reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="reveal.js-3.3.0.1/js/reveal.js"></script>
 
   <script>
 
