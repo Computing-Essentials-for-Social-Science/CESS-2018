@@ -15,6 +15,59 @@ output:
     lib_dir: "."
 ---
           
+
+## From last time: getting help 
+- StackOverflow is a great resource
+- May have to adjudicate between responses
+- May have to adapt answers to your specific case 
+
+## Use built-in help
+
+```{r, eval = FALSE}
+?lm
+?read.csv
+?dplyr::rename
+```
+
+## Built-in help will
+- Tell you how functions work, to varying degrees of helpfulness 
+- Often provide some examples of how functions work
+- Often still leave you clueless and needing to Google around some more 
+
+
+## Not-so-useful help
+
+![The help file for `grep` is not very useful for novices](./images/builtin-help/grep-1.png)
+
+
+## Not-so-useful help
+
+![The help file for `grep` is not very useful for novices](./images/builtin-help/grep-2.png)
+
+## Some builtin help is more useful
+
+![The `amce` function does one thing and is well-documented.](./images/builtin-help/amce-1.png)
+
+
+## Some builtin help is more useful
+
+![The `amce` function does one thing and is well-documented.](./images/builtin-help/amce-2.png)
+
+## Some builtin help is more useful
+
+![The `amce` function does one thing and is well-documented.](./images/builtin-help/amce-3.png)
+
+
+## Some builtin help is more useful
+
+![The `amce` function does one thing and is well-documented.](./images/builtin-help/amce-4.png)
+
+
+
+## Asking for help
+- You will want a "minimal working example"
+- [Here's a good guide for writing one in R from Jared Knowles](https://www.jaredknowles.com/journal/2013/5/27/writing-a-minimal-working-example-mwe-in-r)
+- The most efficient way to ask for help, in exponentially decreasing order: Ask Google, ask people you know, ask strangers online 
           
 ## Get organized
 
@@ -76,7 +129,6 @@ output:
 ## Understand your file structure
 - Find an organization that works for you, and be consistent
 - [One approach to file structures for R projects](https://www.r-bloggers.com/a-meaningful-file-structure-for-r-projects/) 
-- 
 - [An excellent tutorial about organized workflow in R](https://apps.fishandwhistle.net/archives/961) 
 
 
@@ -163,8 +215,8 @@ write.csv(some.data.to.save, "./data-subfolder/data-filename.csv")
 ## Version control options
 
 - Git/github
-  - [A tutorial on getting started with GitHub Desktop](https://programminghistorian.org/en/lessons/getting-started-with-github-desktop)
-  - [A tutorial on GitHub integration with R Studio](http://r-pkgs.had.co.nz/git.html)
+    - [A tutorial on getting started with GitHub Desktop](https://programminghistorian.org/en/lessons/getting-started-with-github-desktop)
+    - [A tutorial on GitHub integration with R Studio](http://r-pkgs.had.co.nz/git.html)
 - Dropbox is a good option, though less control than git 
 - Collaboration is tough - live editing code for Python and R are coming but not common right now. More likely, one collaborator should be in a file at a time 
 
@@ -179,15 +231,25 @@ write.csv(some.data.to.save, "./data-subfolder/data-filename.csv")
 - [Chapter of R for Data Science on tidy data](http://r4ds.had.co.nz/tidy-data.html)
 
 
+## Tidy data has
 
-## Long data
+- Each variable forms a column.
+- Each observation forms a row.
+- Each type of observational unit forms a table.
+
+## Tidy data does not have 
+- Column headers are values, not variable names.
+- Multiple variables are stored in one column.
+- Variables are stored in both rows and columns.
+- Multiple types of observational units are stored in the same table.
+- A single observational unit is stored in multiple tables.
 
 
 
+## Long vs wide data
 
-## Wide data
 
-
+![via Sean Anderson](http://seananderson.ca/images/dcast-illustration.png)
 
 
 ## Relational data 

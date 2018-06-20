@@ -487,6 +487,60 @@ Northwestern University</div></h2>
     <h3 class="date">June 20, 2018</h3>
 </section>
 
+<section id="from-last-time-getting-help" class="slide level2">
+<h2>From last time: getting help</h2>
+<ul>
+<li>StackOverflow is a great resource</li>
+<li>May have to adjudicate between responses</li>
+<li>May have to adapt answers to your specific case</li>
+</ul>
+</section>
+<section id="use-built-in-help" class="slide level2">
+<h2>Use built-in help</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?lm
+?read.csv
+?dplyr<span class="op">::</span>rename</code></pre></div>
+</section>
+<section id="built-in-help-will" class="slide level2">
+<h2>Built-in help will</h2>
+<ul>
+<li>Tell you how functions work, to varying degrees of helpfulness</li>
+<li>Often provide some examples of how functions work</li>
+<li>Often still leave you clueless and needing to Google around some more</li>
+</ul>
+</section>
+<section id="not-so-useful-help" class="slide level2">
+<h2>Not-so-useful help</h2>
+<p><img src="images/builtin-help/grep-1.png" alt="The help file for grep is not very useful for novices" /></p>
+</section>
+<section id="not-so-useful-help-1" class="slide level2">
+<h2>Not-so-useful help</h2>
+<p><img src="images/builtin-help/grep-2.png" alt="The help file for grep is not very useful for novices" /></p>
+</section>
+<section id="some-builtin-help-is-more-useful" class="slide level2">
+<h2>Some builtin help is more useful</h2>
+<p><img src="images/builtin-help/amce-1.png" alt="The amce function does one thing and is well-documented." /></p>
+</section>
+<section id="some-builtin-help-is-more-useful-1" class="slide level2">
+<h2>Some builtin help is more useful</h2>
+<p><img src="images/builtin-help/amce-2.png" alt="The amce function does one thing and is well-documented." /></p>
+</section>
+<section id="some-builtin-help-is-more-useful-2" class="slide level2">
+<h2>Some builtin help is more useful</h2>
+<p><img src="images/builtin-help/amce-3.png" alt="The amce function does one thing and is well-documented." /></p>
+</section>
+<section id="some-builtin-help-is-more-useful-3" class="slide level2">
+<h2>Some builtin help is more useful</h2>
+<p><img src="images/builtin-help/amce-4.png" alt="The amce function does one thing and is well-documented." /></p>
+</section>
+<section id="asking-for-help" class="slide level2">
+<h2>Asking for help</h2>
+<ul>
+<li>You will want a “minimal working example”</li>
+<li><a href="https://www.jaredknowles.com/journal/2013/5/27/writing-a-minimal-working-example-mwe-in-r">Here’s a good guide for writing one in R from Jared Knowles</a></li>
+<li>The most efficient way to ask for help, in exponentially decreasing order: Ask Google, ask people you know, ask strangers online</li>
+</ul>
+</section>
 <section id="get-organized" class="slide level2">
 <h2>Get organized</h2>
 <section>
@@ -558,7 +612,6 @@ Northwestern University</div></h2>
 <ul>
 <li>Find an organization that works for you, and be consistent</li>
 <li><a href="https://www.r-bloggers.com/a-meaningful-file-structure-for-r-projects/">One approach to file structures for R projects</a></li>
-<li></li>
 <li><a href="https://apps.fishandwhistle.net/archives/961">An excellent tutorial about organized workflow in R</a></li>
 </ul>
 </section>
@@ -641,9 +694,11 @@ os.chdir(path)</code></pre></div>
 <section id="version-control-options" class="slide level2">
 <h2>Version control options</h2>
 <ul>
-<li>Git/github</li>
+<li>Git/github
+<ul>
 <li><a href="https://programminghistorian.org/en/lessons/getting-started-with-github-desktop">A tutorial on getting started with GitHub Desktop</a></li>
 <li><a href="http://r-pkgs.had.co.nz/git.html">A tutorial on GitHub integration with R Studio</a></li>
+</ul></li>
 <li>Dropbox is a good option, though less control than git</li>
 <li>Collaboration is tough - live editing code for Python and R are coming but not common right now. More likely, one collaborator should be in a file at a time</li>
 </ul>
@@ -658,11 +713,27 @@ os.chdir(path)</code></pre></div>
 <li><a href="http://r4ds.had.co.nz/tidy-data.html">Chapter of R for Data Science on tidy data</a></li>
 </ul>
 </section>
-<section id="long-data" class="slide level2">
-<h2>Long data</h2>
+<section id="tidy-data-has" class="slide level2">
+<h2>Tidy data has</h2>
+<ul>
+<li>Each variable forms a column.</li>
+<li>Each observation forms a row.</li>
+<li>Each type of observational unit forms a table.</li>
+</ul>
 </section>
-<section id="wide-data" class="slide level2">
-<h2>Wide data</h2>
+<section id="tidy-data-does-not-have" class="slide level2">
+<h2>Tidy data does not have</h2>
+<ul>
+<li>Column headers are values, not variable names.</li>
+<li>Multiple variables are stored in one column.</li>
+<li>Variables are stored in both rows and columns.</li>
+<li>Multiple types of observational units are stored in the same table.</li>
+<li>A single observational unit is stored in multiple tables.</li>
+</ul>
+</section>
+<section id="long-vs-wide-data" class="slide level2">
+<h2>Long vs wide data</h2>
+<p><img src="http://seananderson.ca/images/dcast-illustration.png" alt="via Sean Anderson" /></p>
 </section>
 <section id="relational-data" class="slide level2">
 <h2>Relational data</h2>

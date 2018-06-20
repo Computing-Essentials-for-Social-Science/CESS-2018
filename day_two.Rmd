@@ -304,54 +304,6 @@ pstrat.lower = pstrat %>%
 ![](./images/stackoverflow-examples/so-5.png)
 
 
-## Use built-in help
-
-```{r, eval = FALSE}
-?lm
-?read.csv
-?dplyr::rename
-```
-
-## Built-in help will
-- Tell you how functions work, to varying degrees of helpfulness 
-- Often provide some examples of how functions work
-- Often still leave you clueless and needing to Google around some more 
-
-
-## Not-so-useful help
-
-![The help file for `grep` is not very useful for novices](./images/builtin-help/grep-1.png)
-
-
-## Not-so-useful help
-
-![The help file for `grep` is not very useful for novices](./images/builtin-help/grep-2.png)
-
-## Some builtin help is more useful
-
-![The `amce` function does one thing and is well-documented.](./images/builtin-help/amce-1.png)
-
-
-## Some builtin help is more useful
-
-![The `amce` function does one thing and is well-documented.](./images/builtin-help/amce-2.png)
-
-## Some builtin help is more useful
-
-![The `amce` function does one thing and is well-documented.](./images/builtin-help/amce-3.png)
-
-
-## Some builtin help is more useful
-
-![The `amce` function does one thing and is well-documented.](./images/builtin-help/amce-4.png)
-
-
-
-## Asking for help
-- You will want a "minimal working example"
-- [Here's a good guide for writing one in R from Jared Knowles](https://www.jaredknowles.com/journal/2013/5/27/writing-a-minimal-working-example-mwe-in-r)
-- The most efficient way to ask for help, in exponentially decreasing order: Ask Google, ask people you know, ask strangers online 
-
 
 ## IT GETS BETTER 
 
