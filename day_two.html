@@ -574,7 +574,7 @@ gender <span class="co"># if coded as one or zero, as a factor I&#39;d accept th
 
 ## better names
 increase.spending.transportation
-respodent.id
+respondent.id
 female <span class="co"># coded 1 if female</span></code></pre></div>
 </section>
 <section id="similar-variables-should-have-similar-names" class="slide level2">
@@ -622,7 +622,9 @@ g =<span class="st"> </span><span class="kw">ggplot</span>(ncs, <span class="kw"
 </section>
 <section id="more-examples-of-comments-form-my-code" class="slide level2">
 <h2>More examples of comments form my code</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># set up poststratification file and poststratify 2014 MRSP models </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">### POSTSTRATIFICATION <span class="al">###</span>
+
+<span class="co"># set up poststratification file and poststratify 2014 MRSP models </span>
 
 <span class="co"># level is upper or lower districts, pid.level is 3 or 7 point item </span>
 get.cell.predictions &lt;-<span class="st"> </span><span class="cf">function</span>(individual.model,
@@ -653,28 +655,6 @@ pstrat.lower =<span class="st"> </span>pstrat <span class="op">%&gt;%</span><spa
 <span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(<span class="kw">grepl</span>(<span class="st">&quot;L&quot;</span>, modgeoid)) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">cbind</span>(lower.cell.predictions) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(<span class="op">-</span>X)</code></pre></div>
-</section>
-<section id="more" class="slide level2">
-<h2>More</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># transform so the columns are &quot;the percent </span>
-<span class="co"># of the [PARTY] in the district that falls in each cell </span>
-
-<span class="co"># lower</span>
-make.party.proportions.for.level &lt;-<span class="st"> </span><span class="cf">function</span>(level) {
-  <span class="cf">if</span>(level<span class="op">==</span><span class="st">&quot;upper&quot;</span>) pstrat =<span class="st"> </span>pstrat.upper
-  <span class="cf">if</span>(level<span class="op">==</span><span class="st">&quot;lower&quot;</span>) pstrat =<span class="st"> </span>pstrat.lower
-  
-  party.proportions =<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">matrix</span>(<span class="dt">nrow =</span> <span class="kw">nrow</span>(pstrat), <span class="dt">ncol =</span> <span class="kw">length</span>(party.id.vars)))
-  <span class="kw">names</span>(party.proportions) =<span class="st"> </span>party.id.vars
-  
-  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(party.id.vars)){
-    pid &lt;-<span class="st"> </span>party.id.vars[i]
-    
-    <span class="co"># models is in same order as party.id.vars above</span>
-    pstrat[,pid] &lt;-<span class="st"> </span>pstrat<span class="op">$</span>proportion <span class="op">*</span><span class="st"> </span>pstrat[,pid]  }
-  
-    <span class="kw">return</span>(pstrat)
-}</code></pre></div>
 </section>
 <section id="commenting-sounds-easy-in-the-abstract" class="slide level2">
 <h2>Commenting sounds easy in the abstract</h2>

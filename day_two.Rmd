@@ -98,7 +98,7 @@ gender # if coded as one or zero, as a factor I'd accept this
 
 ## better names
 increase.spending.transportation
-respodent.id
+respondent.id
 female # coded 1 if female
 ```
 
@@ -129,8 +129,6 @@ female # coded 1 if female
 
 
 
-
-
 ## Introduce each new subsection of code with a comment
 
 ```{r, eval = FALSE}
@@ -151,6 +149,8 @@ g = ggplot(ncs, aes(voted.pid7.dem)) +
 ## More examples of comments form my code
 
 ```{r, eval = FALSE}
+### POSTSTRATIFICATION ###
+
 # set up poststratification file and poststratify 2014 MRSP models 
 
 # level is upper or lower districts, pid.level is 3 or 7 point item 
@@ -187,33 +187,6 @@ pstrat.lower = pstrat %>%
   dplyr::filter(grepl("L", modgeoid)) %>% 
   cbind(lower.cell.predictions) %>% 
   dplyr::select(-X)
-```
-
-
-## More
-
-```{r, eval = FALSE}
-
-# transform so the columns are "the percent 
-# of the [PARTY] in the district that falls in each cell 
-
-# lower
-make.party.proportions.for.level <- function(level) {
-  if(level=="upper") pstrat = pstrat.upper
-  if(level=="lower") pstrat = pstrat.lower
-  
-  party.proportions = data.frame(matrix(nrow = nrow(pstrat), ncol = length(party.id.vars)))
-  names(party.proportions) = party.id.vars
-  
-  for(i in 1:length(party.id.vars)){
-    pid <- party.id.vars[i]
-    
-    # models is in same order as party.id.vars above
-    pstrat[,pid] <- pstrat$proportion * pstrat[,pid]  }
-  
-    return(pstrat)
-}
-
 ```
 
 

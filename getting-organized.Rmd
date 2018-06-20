@@ -34,6 +34,11 @@ output:
 - Typically, this will be on your disk or on some remote/cloud disk you can access from your machine
 
 
+## Set up lists you can iterate over
+- If you're doing the same task oer and over, 
+
+
+
 ## Understand your file structure
 
 
@@ -125,10 +130,21 @@ dat <- read.csv("some-file-in-your-working-directory.csv", stringsAsFactors = FA
 - Every data task will be different, but tidy data principles will help you keep organized
 - Much of your workflow will be getting data inputs into a tidy format
 - From the beginning, lay out what you need your dataset to look like to do the analyses you want, then work backward from there
+- [Hadley's vignette on tidy data principles](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+- [Chapter of R for Data Science on tidy data](http://r4ds.had.co.nz/tidy-data.html)
+
+
+
 
 ## Long data
 
+
+
+
 ## Wide data
+
+
+
 
 ## Relational data 
 - Some data has structures more complex than simple tables
@@ -139,14 +155,35 @@ dat <- read.csv("some-file-in-your-working-directory.csv", stringsAsFactors = FA
 
 
 
-
-
-
-
+## Checking up on your data cleaning
+- glance at your data: 
+  - `View()` (but be careful!)
+  - `summary()`
+  - `head()` and `tail()`
+  - `tibble::glimpse()`
+  - `is.na()` and `sum(is.na())`
 
 
 
 ## Where to work? Development environments
+- Let your software do some of the work for you
+- RStudio projects
+- RStudio gets new features every day that help you stay organized
+- RMarkdown
+
+
+
 
 
 What folders should you have
+
+
+
+## Get organized to learn in the future
+
+- Follow #rstats on twitter
+- [I made a twitter list of good R follows here](https://twitter.com/cskovron/lists/rstats)
+- Star your favorite packages on github and follow developers
+
+
+
