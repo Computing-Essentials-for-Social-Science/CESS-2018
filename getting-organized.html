@@ -489,6 +489,35 @@ Northwestern University</div></h2>
 
 <section id="get-organized" class="slide level2">
 <h2>Get organized</h2>
+<section>
+</section>
+</section>
+<section id="your-audiences-in-decreasing-order" class="slide level2">
+<h2>Your audiences, in decreasing order</h2>
+<ul>
+<li>Your future self</li>
+<li>Your collaborators</li>
+<li>Replicators</li>
+</ul>
+</section>
+<section id="good-organizational-principles" class="slide level2">
+<h2>Good organizational principles</h2>
+</section>
+<section id="one-script-per-task" class="slide level2">
+<h2>One script per task</h2>
+<ul>
+<li>In general, each scipt should do a specific high-level task</li>
+<li>Figuring out where to break up scripts is more of an art than a science, but some rules of thumb</li>
+<li>If you are at a point in your workflow where it would make sense to save something - a dataset, a model object, a few figures, etc, that is often a good time for a new script</li>
+</ul>
+</section>
+<section id="mind-the-order" class="slide level2">
+<h2>Mind the order</h2>
+<ul>
+<li>Complex tasks will require multiple scripts</li>
+<li>Use organizing tools like RStudio’s Projects</li>
+<li>Number scripts in order: <code>0_clean_data.R</code>, <code>1_merge_census_data.R</code>, <code>3_fit_multilevel models.R</code></li>
+</ul>
 </section>
 <section id="automate-everything-that-can-be-automated" class="slide level2">
 <h2>Automate everything that can be automated</h2>
@@ -500,18 +529,25 @@ Northwestern University</div></h2>
 </section>
 <section id="dont-repeat-yourself" class="slide level2">
 <h2>DON’T REPEAT YOURSELF</h2>
+<ul>
+<li>Inefficient</li>
+<li>Invites mistakes</li>
+<li>Makes even simple tweaks to code take forever to implement</li>
+<li>Ask yourself, “could this code do this task 100 times?”</li>
+</ul>
 </section>
 <section id="dont-copy-and-paste" class="slide level2">
 <h2>Don’t copy and paste</h2>
 <ul>
 <li>Call things from where they are stored</li>
 <li>Typically, this will be on your disk or on some remote/cloud disk you can access from your machine</li>
+<li>If your code calls for the same task to be repeated, find ways to automate</li>
 </ul>
 </section>
 <section id="set-up-lists-you-can-iterate-over" class="slide level2">
 <h2>Set up lists you can iterate over</h2>
 <ul>
-<li>If you’re doing the same task oer and over, you want to iterate over a list</li>
+<li>If you’re doing the same task over and over, you want to iterate over a list</li>
 <li>Strategies for doing this depend on task and language</li>
 <li>for loops</li>
 <li>apply functions</li>
@@ -519,9 +555,23 @@ Northwestern University</div></h2>
 </section>
 <section id="understand-your-file-structure" class="slide level2">
 <h2>Understand your file structure</h2>
+<ul>
+<li>Find an organization that works for you, and be consistent</li>
+<li><a href="https://www.r-bloggers.com/a-meaningful-file-structure-for-r-projects/">One approach to file structures for R projects</a></li>
+<li></li>
+<li><a href="https://apps.fishandwhistle.net/archives/961">An excellent tutorial about organized workflow in R</a></li>
+</ul>
 </section>
 <section id="paths" class="slide level2">
 <h2>Paths</h2>
+<ul>
+<li>Paths are how your program finds what it needs to</li>
+<li>You shouldn’t be clicking on datasets or files to load them</li>
+</ul>
+</section>
+<section id="modern-ides-can-autocomplete-paths" class="slide level2">
+<h2>Modern IDES can autocomplete paths</h2>
+<p><img src="images/ide-path/ide-path1.png" /> <img src="images/ide-path/ide-path2.png" /> <img src="images/ide-path/ide-path3.png" /> <img src="images/ide-path/ide-path4.png" /></p>
 </section>
 <section id="setting-a-working-directory" class="slide level2">
 <h2>Setting a working directory</h2>
@@ -544,6 +594,12 @@ os.chdir(path)</code></pre></div>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> <span class="st">&quot;~/Dropbox/Research/ncs-constituent-eval/analysis&quot;</span></code></pre></div>
 </section>
+<section id="in-r-convention-is-now-to-use-rstudio-projects" class="slide level2">
+<h2>In R, convention is now to use RStudio “Projects”</h2>
+<ul>
+<li>This improves reproducibility but is a little more advanced, so I encourage you to look at it on your own if you are an R specialist</li>
+</ul>
+</section>
 <section id="navigating-relational-paths" class="slide level2">
 <h2>Navigating, relational paths</h2>
 <ul>
@@ -552,37 +608,26 @@ os.chdir(path)</code></pre></div>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dat &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;some-file-in-your-working-directory.csv&quot;</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</code></pre></div>
 </section>
-<section id="navigating-relational-paths-1" class="slide level2">
-<h2>Navigating, relational paths</h2>
-</section>
-<section id="good-organizational-principles" class="slide level2">
-<h2>Good organizational principles</h2>
-</section>
-<section id="good-and-bad-file-names" class="slide level2">
-<h2>Good and bad file names</h2>
-</section>
-<section id="one-script-per-task" class="slide level2">
-<h2>One script per task</h2>
+<section id="setting-relative-paths---unix-based-systems-including-mac" class="slide level2">
+<h2>Setting relative paths - Unix-based systems including Mac</h2>
 <ul>
-<li>In general, each scipt should do a specific high-level task</li>
-<li>Figuring out where to break up scripts is more of an art than a science, but some rules of thumb</li>
-<li>If you are at a point in your workflow where it would make sense to save something - a dataset, a model object, a few figures, etc,</li>
+<li>You can set paths at levels outside your working directory</li>
+<li><code>~</code> Your home directory (on my Mac, <code>/Users/cskovron/</code>)</li>
+<li><code>.</code> The current directory (<code>./images/</code> is a subfolder of the working directory called <code>images</code>)</li>
+<li><code>..</code> The parent of the current directory (the directory the working directory is in)</li>
 </ul>
 </section>
-<section id="mind-the-order" class="slide level2">
-<h2>Mind the order</h2>
+<section id="dont-change-your-working-directory-to-save-to-a-subfolder" class="slide level2">
+<h2>Don’t change your working directory to save to a subfolder</h2>
 <ul>
-<li>Complex tasks will require multiple scripts</li>
-<li>Use organizing tools like RStudio’s Projects</li>
-<li>Number scripts in order: <code>0_clean_data.R</code>, <code>1_merge_census_data.R</code>, <code>3_fit_multilevel models.R</code></li>
+<li>Just do:</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write.csv</span>(some.data.to.save, <span class="st">&quot;./data-subfolder/data-filename.csv&quot;</span>)</code></pre></div>
 </section>
-<section id="your-audiences-in-decreasing-order" class="slide level2">
-<h2>Your audiences, in decreasing order</h2>
+<section id="paths-dont-play-nicely-between-windows-and-unix-systems" class="slide level2">
+<h2>Paths don’t play nicely between Windows and Unix systems</h2>
 <ul>
-<li>Your future self</li>
-<li>Your collaborators</li>
-<li>Replicators</li>
+<li><a href="https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f">A tutorial on making your Python code portable between Windows and Unix</a></li>
 </ul>
 </section>
 <section id="version-control" class="slide level2">
@@ -597,7 +642,9 @@ os.chdir(path)</code></pre></div>
 <h2>Version control options</h2>
 <ul>
 <li>Git/github</li>
-<li>Dropbox</li>
+<li><a href="https://programminghistorian.org/en/lessons/getting-started-with-github-desktop">A tutorial on getting started with GitHub Desktop</a></li>
+<li><a href="http://r-pkgs.had.co.nz/git.html">A tutorial on GitHub integration with R Studio</a></li>
+<li>Dropbox is a good option, though less control than git</li>
 <li>Collaboration is tough - live editing code for Python and R are coming but not common right now. More likely, one collaborator should be in a file at a time</li>
 </ul>
 </section>
@@ -630,12 +677,14 @@ os.chdir(path)</code></pre></div>
 <section id="checking-up-on-your-data-cleaning" class="slide level2">
 <h2>Checking up on your data cleaning</h2>
 <ul>
-<li>glance at your data:</li>
+<li>glance at your data:
+<ul>
 <li><code>View()</code> (but be careful!)</li>
-<li><code>summary()</code></li>
+<li><code>summary()</code> (be careful on big datasets)</li>
 <li><code>head()</code> and <code>tail()</code></li>
 <li><code>tibble::glimpse()</code></li>
 <li><code>is.na()</code> and <code>sum(is.na())</code></li>
+</ul></li>
 </ul>
 </section>
 <section id="set-yourself-up-to-do-things-iteratively" class="slide level2">
@@ -646,15 +695,21 @@ os.chdir(path)</code></pre></div>
 </ul>
 <p><img src="images/helper-csv.png" /></p>
 </section>
+<section id="tricks-for-doing-things-iteratively" class="slide level2">
+<h2>Tricks for doing things iteratively</h2>
+<ul>
+<li>Use <code>paste()</code> and <code>paste0()</code> to help write captions and labels</li>
+<li>Can select columns using variables: <code>data[, issue]</code>, if <code>issue</code> is a character vector, selects just that column. Loop over issues</li>
+</ul>
+</section>
 <section id="where-to-work-development-environments" class="slide level2">
 <h2>Where to work? Development environments</h2>
 <ul>
 <li>Let your software do some of the work for you</li>
 <li>RStudio projects</li>
 <li>RStudio gets new features every day that help you stay organized</li>
-<li>RMarkdown</li>
+<li>RMarkdown allows you to integrate R code and writing to produce reports in HTML and PDF, slides, etc. Very flexible and extendable</li>
 </ul>
-<p>What folders should you have</p>
 </section>
 <section id="get-organized-to-learn-in-the-future" class="slide level2">
 <h2>Get organized to learn in the future</h2>
