@@ -47,7 +47,7 @@ output:
 
 ## Big Data is indeed big, but is correlation is enough?  
 <aside class="notes">Does BD mean the end of theory? This is some of more philosophical stuff.</aside>
-<span class="fragment" data-fragment-index="1"> - whole of sample frame is not the population </span><br>
+<span class="fragment" data-fragment-index="1"> - whole of sample frame is not the population, unless science of X</span><br>
 <span class="fragment" data-fragment-index="2"> - systemic bias instead sampling bias</span><br>
 <span class="fragment" data-fragment-index="3"> - P-hacking, [meet N-hacking: 6:06 mark](https://mediasite.kellogg.northwestern.edu/Mediasite/Play/70c3061a791c46efa349f89670d72bc61d?playFrom=10656&autoStart=true&popout=true)<br>
 <span class="fragment" data-fragment-index="4"> - More about new types of data, or richness of context </span>
@@ -149,6 +149,11 @@ output:
 ## But you might have to move slowly too
   - harvesting data can take time
   - stay off server blacklists
+  
+## Social science is moving toward lab or collaborative model
+  - You should work with others
+  - Important to share and read other's code
+  - Must be flexible
 
 ## It's important to start with observation
   Platforms support actions that:<br>
