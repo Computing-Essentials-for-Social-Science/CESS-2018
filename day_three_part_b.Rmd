@@ -1,0 +1,191 @@
+---
+title: "Day Three, part B<br> Be careful out there folks!"
+author: |
+        | Jon Atwell \& Christopher Skovron
+        | Northwestern University 
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  revealjs::revealjs_presentation: 
+    theme: simple
+    highlight: haddock
+    center: true
+    transition: none
+    #css: reveal.css
+    self_contained: false
+    reveal_plugins: ["notes"]
+    lib_dir: "."
+---
+
+## Get giddy about the possibilities!
+          
+## count_problems $=G($ data_size$^\alpha), \alpha > 1$?
+
+## Probably not, just different problems
+ - Pitfalls of Inference
+ - Ethical/legal considerations
+ - Practical considerations
+ 
+
+## Salganik's Characterists of Big Data
+<img class="plain" src="https://www.bitbybitbook.com/images/bit-by-bit-cover-934a0a3f.jpg">
+<br>
+(PUP, 2018)
+
+## Characterists BD **can** have
+<span class="fragment" data-fragment-index="1">  - **Huge N** </span><br>
+<span class="fragment" data-fragment-index="2">  - Not created for science* </span><br>
+<span class="fragment" data-fragment-index="3">  - Always-on </span><br>
+<span class="fragment" data-fragment-index="4">  - Nonreactive </span><br>
+<span class="fragment" data-fragment-index="5">  - Incomplete </span><br>
+<span class="fragment" data-fragment-index="6">  - Inaccessible </span><br>
+<span class="fragment" data-fragment-index="7">  - Nonrepresentive </span><br>
+<span class="fragment" data-fragment-index="8">  - Drifting </span><br>
+<span class="fragment" data-fragment-index="9">  - Algorithmically-confounded </span><br>
+<span class="fragment" data-fragment-index="10"> - Dirty </span><br>
+<span class="fragment" data-fragment-index="11"> - Sensitive </span><br>
+  
+
+## Big Data is indeed big, but is correlation is enough?  
+<aside class="notes">Does BD mean the end of theory? This is some of more philosophical stuff.</aside>
+<span class="fragment" data-fragment-index="1"> - whole of sample frame is not the population </span><br>
+<span class="fragment" data-fragment-index="2"> - systemic bias instead sampling bias</span><br>
+<span class="fragment" data-fragment-index="3"> - P-hacking, [meet N-hacking: 6:06 mark](https://mediasite.kellogg.northwestern.edu/Mediasite/Play/70c3061a791c46efa349f89670d72bc61d?playFrom=10656&autoStart=true&popout=true)<br>
+<span class="fragment" data-fragment-index="4"> - More about new types of data, or richness of context </span>
+
+
+## Not created for science
+<span class="fragment" data-fragment-index="1"> - "digital exhaust"</span><br>
+<span class="fragment" data-fragment-index="2"> - weak link between **construct** and **measures**</span>
+  
+## Always-on
+<span class="fragment" data-fragment-index="1">  - Old: HS diploma to job at 28</span><br>
+<span class="fragment" data-fragment-index="2">  - New: Location every 15 minutes.</span><br>
+<span class="fragment" data-frogment-index="3">  - But: When is this informative? Are we answering different questions?</span>
+  
+## Nonreactive
+<span class="fragment" data-fragment-index="1">  - Old: Generosity in lab studies (reactivity/Hawthorne effect)</span><br>
+<span class="fragment" data-fragment-index="2">  - New: Don't know about observation, or is now normalized</span><br>
+<span class="fragment" data-fragment-index="3">  - But: Have you been on Instagram?</span>
+
+## Incomplete: If only I had:
+<aside class="notes">Relates to are we answering different types of questions?</span>
+  - gender
+  - income
+  - race/ethnicity
+  - IQ
+  - party affliation
+  - ...
+
+## Incessible
+<aside class="notes">Google knows most basic things about all of US pop. Can we see it plz?</aside>
+ - Private companies own it
+ - Governments collect it but don't share
+ 
+## Nonrepresentative
+ - Who actually tweets anyway?
+ - But nonrandom sample can still be very useful!
+  
+## Drifting
+<aside class="notes">Pop, behavior: Facebook system - PageRank, predictive search</aside>
+  - population
+  - behavior
+  - system 
+  
+## Algorithmically confounded
+  - unique experiences (N treatment groups)
+  - recommenders
+  - Matthew effect/increasing returns/preferential attachment
+  - action triggers
+  
+## Bigger question: Is social life now algorithmically confounded?
+  Lack of treatment controls is one thing, but <br>
+  exposures compound to substantial change.<br>
+  <ul>
+  <li>those confounds create new reality</li>
+  <li>Facebook vote encouragement</li>
+  <li>LinkedIn recommendations</li>
+  </ul>
+
+## Dirty
+  - Wait, Russians can use Twitter too?!
+  - Wait, computers can do automated tasks?!
+  
+## Sensitive
+  - More so than you might think: [Meta data](https://kieranhealy.org/blog/archives/2013/06/09/using-metadata-to-find-paul-revere/)
+  - Merging or cross referencing data sets, especially so
+  
+# Ethical and legal considerations
+
+## Ethical
+  - Loss of Privacy (See [Netflix Prize](https://www.cs.cornell.edu/~shmat/netflix-faq.html))
+  - Violation of trust (See Cambridge Analytica)
+  - Exploitation
+  - Lack of informed consent
+  
+## Legal Pitfalls
+  - Violation of User Agreements ([Sandvig vs Sessions](https://www.aclu.org/cases/sandvig-v-sessions-challenge-cfaa-prohibition-uncovering-racial-discrimination-online))
+  - Impersonation
+  - Deception
+  
+## Legal hangups
+  - Formal data use agreements can happen without scientific input.
+  - Can take a long time
+  - Can be expensive
+  
+## Paging IRB!
+  - behind the times, don't understand tech systems
+  - assumes you'll follow UA?
+
+# Practical considerations
+
+## You might have to read more widely
+  - physicists doing S.S. in _Science_ and _PNAS_, etc.<br>
+  <span class="fragment" data-fragment-index="1"><center><img class="plain" src="https://imgs.xkcd.com/comics/physicists.png"></center></span>
+  
+## You have to move quickly
+  - Small tweaks to websites can break scripts
+  - Data are more widely available, more people study them
+  
+## But you might have to move slowly too
+  - harvesting data can take time
+  - stay off server blacklists
+
+## It's important to start with observation
+  Platforms support actions that:<br>
+  <ul>
+  <li>go unused</li>
+  <li>get co-opted</li>
+  </ul>
+  
+## It's important to start with observation
+  Platforms can have unique:<br>
+  <ul>
+  <li>norms</li>
+  <li>terms</li>
+  <li>meanings for words</li>
+  <li>...?</li>
+  </ul>
+    
+## Scraping just ain't what it used to be
+  - Most webpages are dynamic and idiosyncratic
+  - Server-side ops/parameters are intentionally opaque
+  
+## You can ask for data from corporations and other orgs
+  - think of quid pro quo
+  - Use LinkedIn to find lower level people who might care
+  - use email finders or domain hack address
+  - repeat
+  
+## You can use Mturk (or its mirrors)!
+  - cheaply label training set
+  - cheaply validate results
+  - but I'm skeptical of survey results
+  
+# And yet, it's an exciting time to be doing social science!
+
+
+
+  
+ 
+    
+

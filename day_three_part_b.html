@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="dcterms.date" content="2018-06-20" />
+  <title>Day Three, part B  Be careful out there folks!</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Day Three, part B<br> Be careful out there folks!</h1>
+    <h2 class="author"><div style="white-space: pre-line;">Jon Atwell &amp; Christopher Skovron
+Northwestern University</div></h2>
+    <h3 class="date">June 20, 2018</h3>
+</section>
+
+<section id="get-giddy-about-the-possibilities" class="slide level2">
+<h2>Get giddy about the possibilities!</h2>
+</section>
+<section id="count_problems-g-data_sizealpha-alpha-1" class="slide level2">
+<h2>count_problems <span class="math inline">\(=G(\)</span> data_size<span class="math inline">\(^\alpha), \alpha &gt; 1\)</span>?</h2>
+</section>
+<section id="probably-not-just-different-problems" class="slide level2">
+<h2>Probably not, just different problems</h2>
+<ul>
+<li>Pitfalls of Inference</li>
+<li>Ethical/legal considerations</li>
+<li>Practical considerations</li>
+</ul>
+</section>
+<section id="salganiks-characterists-of-big-data" class="slide level2">
+<h2>Salganik’s Characterists of Big Data</h2>
+<p><img class="plain" src="https://www.bitbybitbook.com/images/bit-by-bit-cover-934a0a3f.jpg"> <br> (PUP, 2018)</p>
+</section>
+<section id="characterists-bd-can-have" class="slide level2">
+<h2>Characterists BD <strong>can</strong> have</h2>
+<p><span class="fragment" data-fragment-index="1"> - <strong>Huge N</strong> </span><br> <span class="fragment" data-fragment-index="2"> - Not created for science* </span><br> <span class="fragment" data-fragment-index="3"> - Always-on </span><br> <span class="fragment" data-fragment-index="4"> - Nonreactive </span><br> <span class="fragment" data-fragment-index="5"> - Incomplete </span><br> <span class="fragment" data-fragment-index="6"> - Inaccessible </span><br> <span class="fragment" data-fragment-index="7"> - Nonrepresentive </span><br> <span class="fragment" data-fragment-index="8"> - Drifting </span><br> <span class="fragment" data-fragment-index="9"> - Algorithmically-confounded </span><br> <span class="fragment" data-fragment-index="10"> - Dirty </span><br> <span class="fragment" data-fragment-index="11"> - Sensitive </span><br></p>
+</section>
+<section id="big-data-is-indeed-big-but-is-correlation-is-enough" class="slide level2">
+<h2>Big Data is indeed big, but is correlation is enough?</h2>
+<aside class="notes">
+Does BD mean the end of theory? This is some of more philosophical stuff.
+</aside>
+<p><span class="fragment" data-fragment-index="1"> - whole of sample frame is not the population </span><br> <span class="fragment" data-fragment-index="2"> - systemic bias instead sampling bias</span><br> <span class="fragment" data-fragment-index="3"> - P-hacking, <a href="https://mediasite.kellogg.northwestern.edu/Mediasite/Play/70c3061a791c46efa349f89670d72bc61d?playFrom=10656&amp;autoStart=true&amp;popout=true">meet N-hacking: 6:06 mark</a><br> <span class="fragment" data-fragment-index="4"> - More about new types of data, or richness of context </span></p>
+</section>
+<section id="not-created-for-science" class="slide level2">
+<h2>Not created for science</h2>
+<p><span class="fragment" data-fragment-index="1"> - “digital exhaust”</span><br> <span class="fragment" data-fragment-index="2"> - weak link between <strong>construct</strong> and <strong>measures</strong></span></p>
+</section>
+<section id="always-on" class="slide level2">
+<h2>Always-on</h2>
+<p><span class="fragment" data-fragment-index="1"> - Old: HS diploma to job at 28</span><br> <span class="fragment" data-fragment-index="2"> - New: Location every 15 minutes.</span><br> <span class="fragment" data-frogment-index="3"> - But: When is this informative? Are we answering different questions?</span></p>
+</section>
+<section id="nonreactive" class="slide level2">
+<h2>Nonreactive</h2>
+<p><span class="fragment" data-fragment-index="1"> - Old: Generosity in lab studies (reactivity/Hawthorne effect)</span><br> <span class="fragment" data-fragment-index="2"> - New: Don’t know about observation, or is now normalized</span><br> <span class="fragment" data-fragment-index="3"> - But: Have you been on Instagram?</span></p>
+</section>
+<section id="incomplete-if-only-i-had" class="slide level2">
+<h2>Incomplete: If only I had:</h2>
+<aside class="notes">
+<p>Relates to are we answering different types of questions?</span> - gender - income - race/ethnicity - IQ - party affliation - …</p>
+</section>
+<section id="incessible" class="slide level2">
+<h2>Incessible</h2>
+<aside class="notes">
+Google knows most basic things about all of US pop. Can we see it plz?
+</aside>
+<ul>
+<li>Private companies own it</li>
+<li>Governments collect it but don’t share</li>
+</ul>
+</section>
+<section id="nonrepresentative" class="slide level2">
+<h2>Nonrepresentative</h2>
+<ul>
+<li>Who actually tweets anyway?</li>
+<li>But nonrandom sample can still be very useful!</li>
+</ul>
+</section>
+<section id="drifting" class="slide level2">
+<h2>Drifting</h2>
+<aside class="notes">
+Pop, behavior: Facebook system - PageRank, predictive search
+</aside>
+<ul>
+<li>population</li>
+<li>behavior</li>
+<li>system</li>
+</ul>
+</section>
+<section id="algorithmically-confounded" class="slide level2">
+<h2>Algorithmically confounded</h2>
+<ul>
+<li>unique experiences (N treatment groups)</li>
+<li>recommenders</li>
+<li>Matthew effect/increasing returns/preferential attachment</li>
+<li>action triggers</li>
+</ul>
+</section>
+<section id="bigger-question-is-social-life-now-algorithmically-confounded" class="slide level2">
+<h2>Bigger question: Is social life now algorithmically confounded?</h2>
+Lack of treatment controls is one thing, but <br> exposures compound to substantial change.<br>
+<ul>
+<li>
+those confounds create new reality
+</li>
+<li>
+Facebook vote encouragement
+</li>
+<li>
+LinkedIn recommendations
+</li>
+</ul>
+</section>
+<section id="dirty" class="slide level2">
+<h2>Dirty</h2>
+<ul>
+<li>Wait, Russians can use Twitter too?!</li>
+<li>Wait, computers can do automated tasks?!</li>
+</ul>
+</section>
+<section id="sensitive" class="slide level2">
+<h2>Sensitive</h2>
+<ul>
+<li>More so than you might think: <a href="https://kieranhealy.org/blog/archives/2013/06/09/using-metadata-to-find-paul-revere/">Meta data</a></li>
+<li>Merging or cross referencing data sets, especially so</li>
+</ul>
+</section>
+<section><section id="ethical-and-legal-considerations" class="titleslide slide level1"><h1>Ethical and legal considerations</h1></section><section id="ethical" class="slide level2">
+<h2>Ethical</h2>
+<ul>
+<li>Loss of Privacy (See <a href="https://www.cs.cornell.edu/~shmat/netflix-faq.html">Netflix Prize</a>)</li>
+<li>Violation of trust (See Cambridge Analytica)</li>
+<li>Exploitation</li>
+<li>Lack of informed consent</li>
+</ul>
+</section><section id="legal-pitfalls" class="slide level2">
+<h2>Legal Pitfalls</h2>
+<ul>
+<li>Violation of User Agreements (<a href="https://www.aclu.org/cases/sandvig-v-sessions-challenge-cfaa-prohibition-uncovering-racial-discrimination-online">Sandvig vs Sessions</a>)</li>
+<li>Impersonation</li>
+<li>Deception</li>
+</ul>
+</section><section id="legal-hangups" class="slide level2">
+<h2>Legal hangups</h2>
+<ul>
+<li>Formal data use agreements can happen without scientific input.</li>
+<li>Can take a long time</li>
+<li>Can be expensive</li>
+</ul>
+</section><section id="paging-irb" class="slide level2">
+<h2>Paging IRB!</h2>
+<ul>
+<li>behind the times, don’t understand tech systems</li>
+<li>assumes you’ll follow UA?</li>
+</ul>
+</section></section>
+<section><section id="practical-considerations" class="titleslide slide level1"><h1>Practical considerations</h1></section><section id="you-might-have-to-read-more-widely" class="slide level2">
+<h2>You might have to read more widely</h2>
+<ul>
+<li>physicists doing S.S. in <em>Science</em> and <em>PNAS</em>, etc.<br> <span class="fragment" data-fragment-index="1">
+<center>
+<img class="plain" src="https://imgs.xkcd.com/comics/physicists.png">
+</center>
+</span></li>
+</ul>
+</section><section id="you-have-to-move-quickly" class="slide level2">
+<h2>You have to move quickly</h2>
+<ul>
+<li>Small tweaks to websites can break scripts</li>
+<li>Data are more widely available, more people study them</li>
+</ul>
+</section><section id="but-you-might-have-to-move-slowly-too" class="slide level2">
+<h2>But you might have to move slowly too</h2>
+<ul>
+<li>harvesting data can take time</li>
+<li>stay off server blacklists</li>
+</ul>
+</section><section id="its-important-to-start-with-observation" class="slide level2">
+<h2>It’s important to start with observation</h2>
+Platforms support actions that:<br>
+<ul>
+<li>
+go unused
+</li>
+<li>
+get co-opted
+</li>
+</ul>
+</section><section id="its-important-to-start-with-observation-1" class="slide level2">
+<h2>It’s important to start with observation</h2>
+Platforms can have unique:<br>
+<ul>
+<li>
+norms
+</li>
+<li>
+terms
+</li>
+<li>
+meanings for words
+</li>
+<li>
+…?
+</li>
+</ul>
+</section><section id="scraping-just-aint-what-it-used-to-be" class="slide level2">
+<h2>Scraping just ain’t what it used to be</h2>
+<ul>
+<li>Most webpages are dynamic and idiosyncratic</li>
+<li>Server-side ops/parameters are intentionally opaque</li>
+</ul>
+</section><section id="you-can-ask-for-data-from-corporations-and-other-orgs" class="slide level2">
+<h2>You can ask for data from corporations and other orgs</h2>
+<ul>
+<li>think of quid pro quo</li>
+<li>Use LinkedIn to find lower level people who might care</li>
+<li>use email finders or domain hack address</li>
+<li>repeat</li>
+</ul>
+</section><section id="you-can-use-mturk-or-its-mirrors" class="slide level2">
+<h2>You can use Mturk (or its mirrors)!</h2>
+<ul>
+<li>cheaply label training set</li>
+<li>cheaply validate results</li>
+<li>but I’m skeptical of survey results</li>
+</ul>
+</section></section>
+<section><section id="and-yet-its-an-exciting-time-to-be-doing-social-science" class="titleslide slide level1"><h1>And yet, it’s an exciting time to be doing social science!</h1></section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
